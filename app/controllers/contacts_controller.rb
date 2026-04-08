@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ContactsController < ApplicationController
+  allow_unauthenticated_access
+
   def create
     @contact = Contact.create(
       params.require(:contact).permit(:name, :email_address, :message),
