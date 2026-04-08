@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class ContactsController < ApplicationController
   def create
     @contact = Contact.create(
-      params.require(:contact).permit(:name, :email_address, :message)
+      params.require(:contact).permit(:name, :email_address, :message),
     )
 
     redirect_to contacts_thank_you_path
