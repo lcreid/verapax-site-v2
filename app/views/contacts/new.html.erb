@@ -15,6 +15,16 @@
       <p>
         We'd love to talk with you about how we can work together.
       </p>
+      <h4>Use Our Secure Contact Form</h4>
+      <%= bootstrap_form_with(model: false, class: "mb-3") do |contact_form| %>
+        <%= contact_form.text_field(:name) %>
+        <%= contact_form.email_field(
+          :email,
+          help: email_help,
+          ) %>
+        <%= contact_form.text_area(:message) %>
+        <%= contact_form.submit("Send") %>
+      <% end %>
       <h4>E-Mail</h4>
       <p>
         Send us an e-mail at <a href="mailto:info@verapax.org?subject=Information%20Request">info@verapax.org</a>.
