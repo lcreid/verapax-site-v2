@@ -12,5 +12,7 @@ class DashboardControllerTest < ActionDispatch::IntegrationTest
     get dashboard_path
     assert_response :ok
     assert_select "h1", "#{user.name}'s Dashboard"
+    assert_select "input[value='Name Contact01']"
+    assert_select "input[value='Name Contact02']"
   end
 end

@@ -1,0 +1,9 @@
+contact_01:
+  name: Name Contact01
+  email_address: contact_01@example.com
+  message: contact_01
+
+contact_02:
+  name: Name Contact02
+  email_address: contact_02@example.com
+  message: contact_02
