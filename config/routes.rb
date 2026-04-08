@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [ :create, :new ]
   get "contacts/thank-you", to: "contacts#thank_you"
+
+  get "dashboard", to: "dashboard#show"
 end
