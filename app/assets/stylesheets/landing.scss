@@ -1,0 +1,63 @@
+@use "variables";
+@use "bootstrap/scss/bootstrap";
+
+.bg-tertiary {
+  background-color: variables.$tertiary;
+}
+
+.biography-text {
+  font-size: 1.125rem;
+}
+
+.btn {
+  border-radius: 2em;
+}
+
+.call-to-action-btn {
+  color: bootstrap.$primary; // I would have liked to figure out how to do this in Bootstrap.
+  font-weight: 500;
+  height: 4rem;
+  margin-top: 2.125rem;
+  width: 16rem;
+  border-radius: 2rem;
+  // background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  // @extend .mx-auto;
+  @extend .container-lg;
+}
+
+.image-box {
+  min-height: 24rem;
+  & img {
+    max-width: 100%;
+    height: auto;
+    padding-top: calc(var(--bs-gutter-x) * 0.5);
+    padding-bottom: calc(var(--bs-gutter-x) * 0.5);
+  }
+}
+
+.landing {
+  margin-bottom: 2rem;
+  // @extend .mx-auto;
+}
+
+.service-heading {
+  min-height: 2.4em;
+}
+
+// @include media-breakpoint-up(lg) {
+// 	.content {
+// 		width: 65rem;
+// 	}
+// }
+
+@include bootstrap.media-breakpoint-up(md) {
+  .w-md-50 {
+    width: 50% !important; // Because Bootstrap makes this important, I do too.
+  }
+}

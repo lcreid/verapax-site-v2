@@ -1,2 +1,11 @@
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons';
+@use "variables";
+
+@use "collapse";
+@use "base";
+@use "landing";
+@use "navbar";
+@use "hero";
+@use "icon";
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";

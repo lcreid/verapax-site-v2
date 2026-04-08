@@ -1,0 +1,29 @@
+@use "variables";
+@use "bootstrap/scss/bootstrap";
+
+.navbar {
+  max-width: variables.$max-width;
+  height: variables.$navbar-height;
+  @extend .mx-auto;
+
+  font-family: bootstrap.$headings-font-family;
+
+  .navbar-nav {
+    .nav-item {
+      font-size: variables.$nav-and-footer-font;
+      line-height: 1.25rem;
+    }
+  }
+}
+
+@include bootstrap.media-breakpoint-up(md) {
+  .navbar-nav {
+    .nav-item {
+      // Center horizontally and vertically
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
