@@ -11,5 +11,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
-  # root "posts#index"
+  get "verapax-means", to: "home#verapax_means"
 end
