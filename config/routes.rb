@@ -14,5 +14,4 @@ Rails.application.routes.draw do
   get "verapax-means", to: "home#verapax_means"
 
   resources :contacts, only: [ :create, :new ]
-  get "contact-us", to: "contacts#new"
 end
