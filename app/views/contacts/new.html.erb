@@ -16,10 +16,10 @@
     </p>
     <div class="col-md-6 mx-auto mx-md-0">
       <h4>Use Our Secure Contact Form</h4>
-      <%= bootstrap_form_with(model: false, class: "mb-3") do |contact_form| %>
+      <%= bootstrap_form_with(model: @contact, class: "mb-3") do |contact_form| %>
         <%= contact_form.text_field(:name) %>
         <%= contact_form.email_field(
-          :email,
+          :email_address,
           help: email_help,
           ) %>
         <%= contact_form.text_area(:message) %>
