@@ -21,4 +21,7 @@
   <%= form.submit( "Sign in", extra_class: "mb-3") %>
 <% end %>
 
-<%= link_to "Forgot password?", new_password_path %>
+<div class="d-flex justify-content-between">
+  <%= link_to "Forgot password?", new_password_path %>
+  <%= link_to_home %>
+</div>
