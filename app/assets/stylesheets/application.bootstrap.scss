@@ -2,10 +2,23 @@
 
 @use "collapse";
 @use "base";
-@use "landing";
 @use "navbar";
 @use "hero";
 @use "icon";
+
+.btn {
+  border-radius: 2em;
+}
+
+.image-box {
+  min-height: 24rem;
+  & img {
+    max-width: 100%;
+    height: auto;
+    padding-top: calc(var(--bs-gutter-x) * 0.5);
+    padding-bottom: calc(var(--bs-gutter-x) * 0.5);
+  }
+}
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons";
