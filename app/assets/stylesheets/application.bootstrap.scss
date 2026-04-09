@@ -1,9 +1,8 @@
-@use "variables";
-
-@use "collapse";
-@use "base";
-@use "navbar";
-@use "hero";
+@import "variables";
+@import "collapse";
+@import "base";
+@import "navbar";
+@import "hero";
 
 .btn {
   border-radius: 2em;
