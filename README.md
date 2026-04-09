@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Images
 
-Things you may want to cover:
+* Original images are in `working-images`.
+* `working-images` is included in git but excluded from Docker.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I spent waaay to much fucking time trying to use Montserrat self-hosted. Fucking cunt-useless piece of shit the web. I'm too pissed to even write up what a cluster-fuck this has been. I almost yelled at ChapGPT.
