@@ -1,7 +1,14 @@
 # frozen_string_literal: true
 
 class ContactsController < ApplicationController
+  layout "dashboard", except: [ :new ]
+
   allow_unauthenticated_access
+
+  before_action only: [ :show ] do
+    @contact = Contact.find(params[:id])
+  end
+  attr_reader :contact
 
   def create
     @contact = Contact.create(
@@ -18,5 +25,9 @@ class ContactsController < ApplicationController
 
     @contact = Contact.new
     render locals: { email_help: }
+  end
+
+  def show
+    render locals: { contact: }
   end
 end

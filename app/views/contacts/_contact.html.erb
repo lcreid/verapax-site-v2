@@ -1,7 +1,6 @@
-<fieldset disabled class="border p-1 mb-2">
-  <%= bootstrap_form_with(model: contact, url: false) do |message_form| %>
-    <%= message_form.text_field(:name) %>
-    <%= message_form.email_field(:email_address) %>
-    <%= message_form.textarea(:message, wrapper_class: "mb-0") %>
-  <% end %>
-</fieldset>
+<div class="d-flex justify-content-between border p-1 mb-2" id="<%= dom_id(contact) %>">
+  <%= tag.div(contact.name, class: "flex-grow-1") %>
+  <%= tag.div(contact.email_address, class: "flex-grow-1") %>
+  <%= tag.div(truncate(contact.message, length: 20), class: "flex-grow-1") %>
+  <%= link_to("Read", contact_path(contact), class: "btn btn-sm") %>
+</div>

@@ -1,0 +1,13 @@
+<div class="d-flex flex-column">
+  <div>
+  <%= contact.message %>
+  </div>
+  <div class="align-self-end">
+    <p><small><%= contact.name %>, sent <%= contact.updated_at.iso8601 %></small></p>
+  </div>
+  <div>
+    <%= link_to(:back, class: "btn") do %>
+      <%= tag.i(class: "bi bi-chevron-left") %> Back
+    <% end %>
+  </div>
+</div>
