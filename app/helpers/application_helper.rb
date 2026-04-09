@@ -22,7 +22,7 @@ module ApplicationHelper
   def sign_in_link
     return if Current.user.present?
 
-    link_to(root_path, class: "btn") do
+    link_to(root_path, class: "ms-auto btn") do
       tag.i(class: "bi bi-box-arrow-right") + tag.span("Sign In", class: "d-none d-md-inline ps-md-2")
     end
   end
@@ -37,7 +37,7 @@ module ApplicationHelper
 
   def top_menu
     tag.div(class: "d-flex") do
-      safe_join([ sign_in_link, sign_out_link ].compact)
+      safe_join([ link_to_home, sign_in_link, sign_out_link ].compact)
     end
   end
 end
