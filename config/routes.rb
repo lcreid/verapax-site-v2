@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   root "home#index"
   get "verapax-means", to: "home#verapax_means"
   get "who-we-work-with", to: "home#who_we_work_with"
+  get "our-people", to: "home#our_people"
 
   resources :contacts, only: [ :create, :new, :show ]
   get "contacts/thank-you", to: "contacts#thank_you"
