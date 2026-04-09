@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
   get "verapax-means", to: "home#verapax_means"
+  get "our-approach", to: "home#our_approach"
   get "who-we-work-with", to: "home#who_we_work_with"
   get "our-people", to: "home#our_people"
 
