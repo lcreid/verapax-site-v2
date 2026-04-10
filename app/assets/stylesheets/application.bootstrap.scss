@@ -20,3 +20,7 @@
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons";
+
+.floating-cta-button {
+  margin: 0 calc($spacer * 2) calc($spacer * 2) 0;
+}
