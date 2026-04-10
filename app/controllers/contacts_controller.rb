@@ -2,6 +2,7 @@
 
 class ContactsController < ApplicationController
   layout "dashboard", except: [ :new ]
+  layout "home", only: [ :new ]
 
   allow_unauthenticated_access
 

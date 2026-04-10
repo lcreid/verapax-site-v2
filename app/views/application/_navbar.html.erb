@@ -9,23 +9,28 @@
     <div class="collapse navbar-collapse" id="public-menu">
       <ul class="navbar-nav ms-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <%= link_to_home(classes: "nav-link") %>
+          <%= link_to_home(nav_link_attributes(root_path)) %>
         </li>
         <li class="nav-item">
-          <%= link_to("Meaning", verapax_means_path, class: "nav-link") %>
+          <%= link_to("Meaning", verapax_means_path, **nav_link_attributes(verapax_means_path)) %>
         </li>
         <li class="nav-item">
-          <%= link_to "Approach", our_approach_path, class: "nav-link" %>
+          <%= link_to "Approach", our_approach_path, **nav_link_attributes(our_approach_path) %>
         </li>
         <li class="nav-item">
-          <%= link_to "Partners", who_we_work_with_path, class: "nav-link" %>
+          <%= link_to "Partners", who_we_work_with_path, **nav_link_attributes(who_we_work_with_path) %>
         </li>
         <li class="nav-item">
-          <%= link_to "People", our_people_path, class: "nav-link" %>
+          <%= link_to "People", our_people_path, **nav_link_attributes(our_people_path) %>
         </li>
         <li class="nav-item">
-          <%= link_to "Learning", life_long_learning_path, class: "nav-link" %>
+          <%= link_to "Learning", life_long_learning_path, **nav_link_attributes(life_long_learning_path) %>
         </li>
+        <% if authenticated? %>
+        <li class="nav-item">
+          <%= sign_out_link(class: "nav-link") %>
+        </li>
+        <% end %>
       </ul>
     </div>
   </div>

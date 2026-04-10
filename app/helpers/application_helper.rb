@@ -13,32 +13,34 @@ module ApplicationHelper
     end
   end
 
-  def link_to_home(classes: nil)
-    classes = Array(classes)
-    link_to(root_path) do
-      tag.i(class: safe_join(([ "bi bi-house" ] + classes).compact, " "))
+  def link_to_home(html_attributes = {})
+    link_to(root_path, **html_attributes) do
+      tag.i(class: "bi bi-house")
     end
   end
 
-  def sign_in_link
-    return if Current.user.present?
+  def nav_link_attributes(path, classes: [], method: :get)
+    classes = Array(classes)
+    return { class: safe_join([ "nav-link" ] + classes, " ") } unless current_page?(path, method:)
 
-    link_to(root_path, class: "ms-auto btn") do
+    { class: safe_join(([ "nav-link", "active" ] + classes).compact, " "), aria_current: "page" }
+  end
+
+  def sign_in_link(html_attributes = {})
+    return if authenticated?
+
+    html_attributes[:class] ||= "ms-auto btn"
+
+    link_to(root_path, **html_attributes) do
       tag.i(class: "bi bi-box-arrow-right") + tag.span("Sign In", class: "d-none d-md-inline ps-md-2")
     end
   end
 
-  def sign_out_link
-    return unless Current.user.present?
+  def sign_out_link(html_attributes = { form_class: "ms-auto", class: "btn" })
+    return unless authenticated?
 
-    button_to(session_path, method: :delete, form_class: "ms-auto", class: "btn") do
+    button_to(session_path, method: :delete, **html_attributes) do
       tag.i(class: "bi bi-box-arrow-left") + tag.span("Sign Out", class: "d-none d-md-inline ps-md-2")
-    end
-  end
-
-  def top_menu
-    tag.div(class: "d-flex") do
-      safe_join([ link_to_home, sign_in_link, sign_out_link ].compact)
     end
   end
 end

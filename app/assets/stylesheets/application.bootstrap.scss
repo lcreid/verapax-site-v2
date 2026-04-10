@@ -1,7 +1,6 @@
 @import "variables";
 @import "collapse";
 @import "base";
-// @import "navbar";
 @import "hero";
 
 .btn {
@@ -22,6 +21,12 @@
   max-width: 4rem;
   height: auto;
   display: block;
+}
+
+.verapax-logo-small {
+  max-width: 4rem;
+  height: auto;
+  display: inline-block;
 }
 
 @import "bootstrap/scss/bootstrap";
