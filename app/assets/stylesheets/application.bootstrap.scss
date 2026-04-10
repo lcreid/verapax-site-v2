@@ -1,7 +1,7 @@
 @import "variables";
 @import "collapse";
 @import "base";
-@import "navbar";
+// @import "navbar";
 @import "hero";
 
 .btn {
@@ -16,6 +16,12 @@
     height: auto;
     display: block;
   }
+}
+
+.navbar img {
+  max-width: 4rem;
+  height: auto;
+  display: block;
 }
 
 @import "bootstrap/scss/bootstrap";

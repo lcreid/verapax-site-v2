@@ -13,9 +13,10 @@ module ApplicationHelper
     end
   end
 
-  def link_to_home
+  def link_to_home(classes: nil)
+    classes = Array(classes)
     link_to(root_path) do
-      tag.i(class: "bi bi-house")
+      tag.i(class: safe_join(([ "bi bi-house" ] + classes).compact, " "))
     end
   end
 

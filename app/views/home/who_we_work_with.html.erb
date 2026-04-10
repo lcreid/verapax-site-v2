@@ -1,104 +1,102 @@
-<div class="container mt-4">
-  <h3 class="text-center">Who We Work With</h3>
-  <div class="row align-items-center mb-4">
-    <div class="col-lg-8 mx-auto image-box text-center mb-lg-3">
-      <%= image_tag("we-we-work-with-11-aug-636x636.jpg") %>
-    </div>
-    <div class="col-lg-8 mx-auto">
-      <p>
-        We work with entities that embrace situated, participatory, collaborative and empowerment approaches to
-        community or social development. Our clients include the non-profit/ social purpose sector, civil society
-        organizations, public-private partnerships, the public sector, and academic and non-profit partnerships. To
-        date, we have contributed our services to initiatives in diverse regions of Americas, Africa, and Asia.
-      </p>
-      <p>
-        If you are a social purpose organization passionate about designing and delivering initiatives that may
-        contribute to addressing some of the systemic inequities that generate social problems such as poverty,
-        violence, racism, and forced migration, we would love to connect with you.
-      </p>
-    </div>
+<h3 class="text-center">Who We Work With</h3>
+<div class="row align-items-center mb-4">
+  <div class="col-lg-8 mx-auto image-box text-center mb-lg-3">
+    <%= image_tag("we-we-work-with-11-aug-636x636.jpg") %>
   </div>
+  <div class="col-lg-8 mx-auto">
+    <p>
+      We work with entities that embrace situated, participatory, collaborative and empowerment approaches to
+      community or social development. Our clients include the non-profit/ social purpose sector, civil society
+      organizations, public-private partnerships, the public sector, and academic and non-profit partnerships. To
+      date, we have contributed our services to initiatives in diverse regions of Americas, Africa, and Asia.
+    </p>
+    <p>
+      If you are a social purpose organization passionate about designing and delivering initiatives that may
+      contribute to addressing some of the systemic inequities that generate social problems such as poverty,
+      violence, racism, and forced migration, we would love to connect with you.
+    </p>
+  </div>
+</div>
 
-  <!-- Thanks to: https://aurooba.com/ticker-tape-marquee-css/ -->
-  <h4 class="text-center">We have worked with:</h4>
-  <div class="d-flex w-100 justify-content-center">
-    <div class="p-4 ticker-tape-container">
-      <% ["ticker-tape", "ticker-tape aria-hidden"].map do |wrapper_class| %>
-      <div class="<%= wrapper_class %>">
-        <%= partner_link(
-          href: "https://www.mothersmattercentre.ca/hippy-navigation/",
-          src: "aboriginal-hippy-logo.jpg",
-          alt: "Mothers Matters Logo") do %>
-          Indigenous Home Instruction for Parents of Preschool Youngsters (HIPPY) in Canada
-        <% end %>
-
-        <%= partner_link(
-          href: "https://www.mothersmattercentre.ca/",
-          src: "MMC-Logo-WEB.gif",
-          alt: "Mothers Matters Logo") do %>
-          Mothers Matter Centre
-        <% end %>
-
-        <%= partner_link(
-          href: "https://issbc.org/",
-          src: "issofbc-logo.svg",
-          alt: "ISS Logo") do %>
-          Immigrant Services Society of BC
-        <% end %>
-
-        <%= partner_link(
-          href: "http://clasbc.net/",
-          src: "clasbc-logo.png",
-          alt: "CLASBC Logo") do %>
-          Community Legal Assistance Society of BC (CLASBC)
-        <% end %>
-
-        <%= partner_link(
-          href: "https://mwcbc.ca/",
-          src: "mwcbc-logo.png",
-          alt: "Migrant Workers Centre Logo") do %>
-          West Coast Domestic Workers Association
-        <% end %>
-
-        <%= partner_link(
-          href: "http://www.povnet.org/",
-          src: "povnet-logo.jpg",
-          alt: "Povnet Logo") do %>
-          PovNet Society
-        <% end %>
-
-        <%= partner_link(
-          href: "http://www.vast-vancouver.ca/",
-          src: "vast.jpg",
-          alt: "VAST Logo") do %>
-          Vancouver Association for the Survivors of Torture, VAST
-        <% end %>
-
-        <%= partner_link(
-          href: "http://parentsupportbc.ca/",
-          src: "pss-logo.png",
-          alt: "PSS Logo") do %>
-          Parent Support Services Society of BC
-        <% end %>
-
-        <%= partner_link(
-          href: "https://students.ubc.ca/about-student-services/go-global",
-          src: "",
-          alt: "") do %>
-          University of British Columbia GoGlobal
-        <% end %>
-
-        <%= partner_link(
-          href: "http://www.sfu.ca/international/index/development.html",
-          src: "",
-          alt: "") do %>
-          Simon Fraser University International Office (iSFU)
-        <% end %>
-
-        <span>Vancouver Status of Women</span>
-        <span>Interfaith Summer Institute for Peace, Justice, and Social Movements</span>
-      </div>
+<!-- Thanks to: https://aurooba.com/ticker-tape-marquee-css/ -->
+<h4 class="text-center">We have worked with:</h4>
+<div class="d-flex w-100 justify-content-center">
+  <div class="p-4 ticker-tape-container">
+    <% ["ticker-tape", "ticker-tape aria-hidden"].map do |wrapper_class| %>
+    <div class="<%= wrapper_class %>">
+      <%= partner_link(
+        href: "https://www.mothersmattercentre.ca/hippy-navigation/",
+        src: "aboriginal-hippy-logo.jpg",
+        alt: "Mothers Matters Logo") do %>
+        Indigenous Home Instruction for Parents of Preschool Youngsters (HIPPY) in Canada
       <% end %>
+
+      <%= partner_link(
+        href: "https://www.mothersmattercentre.ca/",
+        src: "MMC-Logo-WEB.gif",
+        alt: "Mothers Matters Logo") do %>
+        Mothers Matter Centre
+      <% end %>
+
+      <%= partner_link(
+        href: "https://issbc.org/",
+        src: "issofbc-logo.svg",
+        alt: "ISS Logo") do %>
+        Immigrant Services Society of BC
+      <% end %>
+
+      <%= partner_link(
+        href: "http://clasbc.net/",
+        src: "clasbc-logo.png",
+        alt: "CLASBC Logo") do %>
+        Community Legal Assistance Society of BC (CLASBC)
+      <% end %>
+
+      <%= partner_link(
+        href: "https://mwcbc.ca/",
+        src: "mwcbc-logo.png",
+        alt: "Migrant Workers Centre Logo") do %>
+        West Coast Domestic Workers Association
+      <% end %>
+
+      <%= partner_link(
+        href: "http://www.povnet.org/",
+        src: "povnet-logo.jpg",
+        alt: "Povnet Logo") do %>
+        PovNet Society
+      <% end %>
+
+      <%= partner_link(
+        href: "http://www.vast-vancouver.ca/",
+        src: "vast.jpg",
+        alt: "VAST Logo") do %>
+        Vancouver Association for the Survivors of Torture, VAST
+      <% end %>
+
+      <%= partner_link(
+        href: "http://parentsupportbc.ca/",
+        src: "pss-logo.png",
+        alt: "PSS Logo") do %>
+        Parent Support Services Society of BC
+      <% end %>
+
+      <%= partner_link(
+        href: "https://students.ubc.ca/about-student-services/go-global",
+        src: "",
+        alt: "") do %>
+        University of British Columbia GoGlobal
+      <% end %>
+
+      <%= partner_link(
+        href: "http://www.sfu.ca/international/index/development.html",
+        src: "",
+        alt: "") do %>
+        Simon Fraser University International Office (iSFU)
+      <% end %>
+
+      <span>Vancouver Status of Women</span>
+      <span>Interfaith Summer Institute for Peace, Justice, and Social Movements</span>
     </div>
+    <% end %>
   </div>
 </div>

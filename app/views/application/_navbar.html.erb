@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <%= image_tag("aug-logo-verapax-2025-no-text.png") %>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#public-menu" aria-controls="public-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="public-menu">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <%= link_to_home(classes: "nav-link") %>
+        </li>
+        <li class="nav-item">
+          <%= link_to("Meaning", verapax_means_path, class: "nav-link") %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Approach", our_approach_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Partners", who_we_work_with_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "People", our_people_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Learning", life_long_learning_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
