@@ -116,3 +116,12 @@ $body-tertiary-bg: #8a6fb5;
   --bs-nav-link-color: white;
   --bs-nav-link-hover-color: lightgray;
 }
+
+.navbar-toggler {
+  border-color: white;
+}
+
+/* Inverts a dark icon to make it white */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
