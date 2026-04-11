@@ -35,6 +35,10 @@ $body-tertiary-bg: #8a6fb5;
   border-radius: 2em;
 }
 
+.drop-shadow {
+  filter: drop-shadow(2px 2px 1px white);
+}
+
 .image-box {
   padding-top: calc(var(--bs-gutter-x) * 0.5);
   padding-bottom: calc(var(--bs-gutter-x) * 0.5);
