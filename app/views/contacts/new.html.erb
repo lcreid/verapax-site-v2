@@ -1,19 +1,13 @@
-<div class="hero mb-5">
-  <div class="d-flex align-items-center h-100">
-    <div class="hero-image h-100 w-100 d-flex align-items-end">
-      <div class="hero-content pb-5">
-        <h1>Contact Us</h1>
-      </div>
-    </div>
+<% content_for :hero do %>
+<div class="hero mb-2 mb-lg-3 col-lg-8 offset-lg-2">
+  <div class="text p-2 p-md-5">
+    <h1>Contact Us</h1>
   </div>
 </div>
+<% end %>
 
-<div class="container">
+<div class="col-md-8 offset-md-2">
   <div class="row">
-    <h3 class="text-center">Let's Connect</h3>
-    <p class="text-center">
-      We'd love to talk with you about how we can work together.
-    </p>
     <div class="col-md-6 mx-auto mx-md-0">
       <h4>Use Our Secure Contact Form</h4>
       <%= bootstrap_form_with(model: @contact, class: "mb-3") do |contact_form| %>
@@ -23,7 +17,7 @@
           help: email_help,
           ) %>
         <%= contact_form.text_area(:message) %>
-        <%= contact_form.submit("Send") %>
+        <%= contact_form.submit("Send", extra_class: "text-white") %>
       <% end %>
     </div>
     <div class="col-md-6 mx-auto mx-md-0">

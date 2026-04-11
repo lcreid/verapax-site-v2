@@ -4,9 +4,11 @@
 
   <body>
   <%= render partial: "navbar" %>
-  <div class="container-fluid container-lg">
+  <%= yield :hero %>
+  <div class="container-lg">
     <%= yield %>
   </div>
+  <% unless current_page?(new_contact_path) %>
   <div class="sticky-bottom d-flex">
     <%= link_to(new_contact_path, class: "ms-auto floating-cta-button btn bg-secondary text-light") do %>
       Contact Us<br/>
@@ -15,5 +17,6 @@
       <i class="bi bi-chat-square"></i>
     <% end %>
   </div>
+  <% end %>
   </body>
 </html>

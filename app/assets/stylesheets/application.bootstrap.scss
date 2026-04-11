@@ -1,3 +1,4 @@
+$enable-negative-margins: true; // https://getbootstrap.com/docs/5.3/utilities/spacing/#negative-margin
 $max-width: 1440px;
 $paragraph-font: 1.375rem;
 $primary: #3b2c56;
@@ -6,28 +7,38 @@ $tertiary: #8a6fb5;
 
 $body-tertiary-color: #8a6fb5;
 $body-tertiary-bg: #8a6fb5;
-// $nav-link-color: white !important;
-// $nav-link-hover-color: white;
 
+// https://nicolaslule.com/responsive-full-width-hero-image-using-flex/
 .hero {
+  @extend .mt-n3;
+  background-color: $tertiary;
   height: 33vh;
   width: 100%;
 
-  &-content {
-    @extend .container-xl;
-    color: black;
-  }
+  display: flex;
+  flex-direction: column;
+  // Darker: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  // Lighter: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+  // background-image: url("mapa-mundo-con-marcadores-verapax-auto-crop-white-background-1440x768.jpg");
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  // From https://www.w3schools.com/howto/howto_css_hero_image.asp
-  &-image {
-    color: white;
-
-    background-image: url("mapa-mundo-con-marcadores-verapax-auto-crop-white-background-1440x768.jpg");
-
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  & h6,
+  .h6,
+  h5,
+  .h5,
+  h4,
+  .h4,
+  h3,
+  .h3,
+  h2,
+  .h2,
+  h1,
+  .h1 {
+    --bs-heading-color: white;
   }
 }
 

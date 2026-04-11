@@ -1,18 +1,6 @@
-<div class="hero mb-5">
-  <div class="d-flex align-items-center h-100">
-    <div class="hero-image h-100 w-100 d-flex align-items-end">
-    </div>
-    <!--
-    By <a href="//commons.wikimedia.org/wiki/User:Strebe" title="User:Strebe">Strebe</a> -
-    <span class="int-own-work" lang="en">Own work</span>,
-    <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>,
-    <a href="https://commons.wikimedia.org/w/index.php?curid=16115242">Link</a>
-    -->
-  </div>
-</div>
-<div class="col-md-8 offset-md-2">
-
-  <div class="row">
+<% content_for :hero do %>
+<div class="hero mb-2 mb-lg-3 col-lg-8 offset-lg-2">
+  <div class="text p-2 p-md-5">
     <h1>Verapax</h1>
     <p class="h4">
       Collaborative, participatory, empowering, and transformational approach to project management, research,
@@ -22,7 +10,10 @@
       A boutique, community-based, community-centred consulting firm for equitable systems change.
     </p>
   </div>
+</div>
+<% end %>
 
+<div class="col-md-8 offset-md-2">
   <div class="row align-items-center">
     <div class="col-lg-6 image-box text-center pb-3 pb-lg-0">
       <%= image_tag("our-name-BE-KIND-11-aug-636x636.jpg") %>
@@ -33,7 +24,7 @@
         The spirit of our name Verapax reflects our values, where we come from and the knowledge of our ancestors.
       </p>
       <div class="d-flex pb-2 pb-sm-0">
-        <%= link_to("Read More", verapax_means_path, class: "btn btn-sm btn-secondary ms-auto") %>
+        <%= link_to("Read More", verapax_means_path, class: "btn btn-sm btn-secondary ms-auto text-white") %>
       </div>
     </div>
   </div>
@@ -50,7 +41,7 @@
         processes of designing, implementing, and evaluating their initiatives.
       </p>
       <div class="d-flex pb-2 pb-sm-0">
-        <%= link_to "Read More", our_approach_path, class: "btn btn-sm btn-secondary ms-auto" %>
+        <%= link_to "Read More", our_approach_path, class: "btn btn-sm btn-secondary ms-auto text-white" %>
       </div>
     </div>
   </div>
@@ -66,7 +57,7 @@
         community or social development.
       </p>
       <div class="d-flex pb-2 pb-sm-0">
-        <%= link_to "Read More", who_we_work_with_path, class: "btn btn-sm btn-secondary ms-auto" %>
+        <%= link_to "Read More", who_we_work_with_path, class: "btn btn-sm btn-secondary ms-auto text-white" %>
       </div>
     </div>
   </div>
@@ -78,7 +69,7 @@
     <div class="col-lg-6 order-lg-1">
       <h3 class="text-center pb-3">People at Verapax</h3>
       <div class="d-flex pb-2 pb-sm-0">
-        <%= link_to "Read More", our_people_path, class: "btn btn-sm btn-secondary ms-auto" %>
+        <%= link_to "Read More", our_people_path, class: "btn btn-sm btn-secondary ms-auto text-white" %>
       </div>
     </div>
   </div>
@@ -90,7 +81,7 @@
     <div class="col-lg-6">
       <h3 class="text-center pb-3">Connect with Us</h3>
       <div class="d-flex pb-2 pb-sm-0">
-        <%= link_to("Connect with Verapax", new_contact_path, class: "btn btn-sm btn-secondary ms-auto") %>
+        <%= link_to("Connect with Verapax", new_contact_path, class: "btn btn-sm btn-secondary ms-auto text-white") %>
       </div>
     </div>
   </div>
@@ -107,7 +98,7 @@
         with.
       </p>
       <div class="d-flex pb-2 pb-sm-0">
-        <%= link_to "Read More", life_long_learning_path, class: "btn btn-sm btn-secondary ms-auto" %>
+        <%= link_to "Read More", life_long_learning_path, class: "btn btn-sm btn-secondary ms-auto text-white" %>
       </div>
     </div>
   </div>
