@@ -108,3 +108,11 @@ $body-tertiary-bg: #8a6fb5;
   height: 6rem;
   width: auto;
 }
+
+.navbar {
+  --bs-navbar-active-color: darkgray;
+}
+.nav-link {
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: lightgray;
+}
