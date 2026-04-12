@@ -5,9 +5,7 @@
   <body>
   <%= render partial: "navbar" %>
   <%= yield :hero %>
-  <div class="container-lg">
-    <%= yield %>
-  </div>
+  <%= yield %>
   <% unless current_page?(new_contact_path) %>
   <div class="sticky-bottom d-flex">
     <%= link_to(new_contact_path, class: "ms-auto floating-cta-button btn bg-secondary text-light") do %>

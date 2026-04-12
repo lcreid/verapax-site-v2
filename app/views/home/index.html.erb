@@ -1,5 +1,5 @@
 <% content_for :hero do %>
-<div class="hero mb-2 mb-lg-3 col-lg-8 offset-lg-2">
+<div class="hero mb-2 mb-lg-3">
   <div class="text p-2 p-md-5">
     <h1>Verapax</h1>
     <p class="h4">
@@ -102,19 +102,23 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="row align-items-center">
-    <h3 class="text-center pb-3">Follow Us for the Latest</h3>
-    <div class="d-flex justify-content-around">
-      <a href="https://instagram.com/verapax_" class="mx-3" target="_blank">
-        <i class="bi bi-instagram h2"><span class="visually-hidden">Instagram</span></i>
-      </a>
-      <a href="https://www.linkedin.com/company/verapax-evaluations/" class="mx-3" target="_blank">
-        <i class="bi bi-linkedin h2"><span class="visually-hidden">LinkedIn</span></i>
-      </a>
-      <a href="https://www.youtube.com/@video.verapax/" class="mx-3" target="_blank">
-        <i class="bi bi-youtube h2"><span class="visually-hidden">YouTube</span></i>
-      </a>
-    </div>
+<div class="container-fluid align-items-center bg-black invert-icons">
+  <div class="d-flex justify-content-center py-4">
+    <a href="https://instagram.com/verapax_" class="mx-3" target="_blank">
+      <i class="bi bi-instagram h2"><span class="visually-hidden">Instagram</span></i>
+    </a>
+    <a href="https://www.linkedin.com/company/verapax-evaluations/" class="mx-3" target="_blank">
+      <i class="bi bi-linkedin h2"><span class="visually-hidden">LinkedIn</span></i>
+    </a>
+    <a href="https://www.youtube.com/@video.verapax/" class="mx-3" target="_blank">
+      <i class="bi bi-youtube h2"><span class="visually-hidden">YouTube</span></i>
+    </a>
+  </div>
+  <hr class="border border-white border-1 opacity-100 my-0" />
+  <div class="d-flex justify-content-center py-4">
+    <%= link_to("Privacy Policy", "#", class: "text-white mx-5") %>
+    <%= link_to("Contact Us", new_contact_path, class: "text-white mx-5") %>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<nav class="navbar bg-body-black container-lg col-lg-8 offset-lg-2 mb-3">
+<nav class="navbar bg-body-black container-fluid mb-3">
   <div class="container-fluid justify-content-start">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#public-menu" aria-controls="public-menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
       </ul>
     </div>
 
-    <%= search_form(url: false, scope: :site) do |form| %>
+    <%= search_form(url: false, scope: :site, class: "d-none d-md-inline-block") do |form| %>
     <%= search_field_for_form(form:, class: "input-group px-2") %>
     <% end %>
 

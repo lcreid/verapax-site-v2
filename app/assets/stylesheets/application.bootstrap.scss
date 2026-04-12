@@ -138,6 +138,8 @@ $body-tertiary-bg: #8a6fb5;
 
 /* Inverts a dark icon to make it white */
 .navbar-toggler-icon,
-.navbar i {
+.navbar i,
+.invert-icons i,
+i.invert-icons {
   filter: invert(1);
 }
