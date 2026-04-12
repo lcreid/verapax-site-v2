@@ -65,7 +65,7 @@ $body-tertiary-bg: #8a6fb5;
 }
 
 .verapax-logo-small {
-  max-width: 4rem;
+  max-width: 5rem;
   height: auto;
   display: inline-block;
 }
@@ -137,6 +137,7 @@ $body-tertiary-bg: #8a6fb5;
 }
 
 /* Inverts a dark icon to make it white */
-.navbar-toggler-icon {
+.navbar-toggler-icon,
+.navbar i {
   filter: invert(1);
 }

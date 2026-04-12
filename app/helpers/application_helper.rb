@@ -43,4 +43,27 @@ module ApplicationHelper
       tag.i(class: "bi bi-box-arrow-left") + tag.span("Sign Out", class: "d-none d-md-inline ps-md-2")
     end
   end
+
+  def search_form(url:, scope:, class: nil, &)
+    form_with(url:, scope:, method: :get, class:, data: { controller: "auto-submit-search", turbo_action: "replace" }) do |form|
+      capture(form, &)
+    end
+  end
+
+  # By default, the helper is included in all controllers. If we call this `search_field`, it overrides
+  # the Rails `search_field`. That might be something one could leverage if we didn't include helpers globally.
+  def search_field_for_form(form:, class: "input-group", search: nil)
+    tag.div(class:) do
+      form.search_field(
+        :search,
+        value: search,
+        data: { action: "auto-submit-search#submit" },
+        class: "form-control form-control-sm",
+        turbo_permanent: "",
+        ) +
+      tag.button(type="submit", class: "btn btn-sm btn-secondary") do
+        tag.i(class: "bi bi-search")
+      end
+    end
+  end
 end

@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-md bg-body-tertiary container-lg col-lg-8 offset-lg-2 mb-3">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="<%= root_path %>">
-      <%= image_tag("aug-logo-verapax-2025-no-text.png", class: "verapax-logo-small drop-shadow") %>
-    </a>
+<nav class="navbar bg-body-black container-lg col-lg-8 offset-lg-2 mb-3">
+  <div class="container-fluid justify-content-start">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#public-menu" aria-controls="public-menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <%= link_to root_path, class: "navbar-brand d-flex align-items-center mx-2 me-auto" do %>
+      <%= image_tag("all-white-Logo-only-Verapax-ENG-nobackground-150x51-2026.png", class: "verapax-logo-small") %>
+    <% end %>
     <div class="collapse navbar-collapse" id="public-menu">
       <ul class="navbar-nav ms-auto mb-2 mb-md-0">
         <li class="nav-item">
@@ -33,5 +33,15 @@
         <% end %>
       </ul>
     </div>
+
+    <%= search_form(url: false, scope: :site) do |form| %>
+    <%= search_field_for_form(form:, class: "input-group px-2") %>
+    <% end %>
+
+    <% unless current_page?(new_contact_path) %>
+    <div>
+      <%= link_to("Contact Us", new_contact_path, class: "btn btn-sm bg-secondary text-light") %>
+    </div>
+    <% end %>
   </div>
 </nav>
