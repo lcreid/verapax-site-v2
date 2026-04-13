@@ -8,10 +8,9 @@
   <%= yield %>
   <% unless current_page?(new_contact_path) %>
   <div class="sticky-bottom d-flex">
-    <%= link_to(new_contact_path, class: "ms-auto floating-cta-button btn bg-secondary text-light") do %>
+    <%= link_to(new_contact_path, class: "ms-auto floating-cta-button btn bg-secondary text-light border border-white") do %>
       Contact Us<br/>
       <i class="bi bi-envelope"></i>
-      <i class="bi bi-telephone"></i>
       <i class="bi bi-chat-square"></i>
     <% end %>
   </div>
