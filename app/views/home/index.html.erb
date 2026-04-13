@@ -1,26 +1,27 @@
-<% content_for :hero do %>
-<div class="hero d-flex justify-content-around">
-  <%= image_tag(
-    "Logo-Verapax-ENG-nobackground-cropped-2026.png",
-    alt: "Verapax Logo",
-    class: "mx-4",
-    style: "max-width: 25vw; max-height: auto; display: block;",
-  ) %>
-  <%= image_tag(
-    "panel-cropped-nobackground-9.png",
-    alt: "Panel speaking in front of audience",
-    style: "max-width: 30vw; max-height: auto; display: block;",
-    ) %>
+<div class="d-flex flex-column">
+  <div class="hero">
+    <div class="d-flex justify-content-around bg-body-tertiary">
+      <%= image_tag(
+        "Logo-Verapax-ENG-nobackground-cropped-2026.png",
+        alt: "Verapax Logo",
+        class: "mx-4",
+        style: "width: 25vw; height: auto; display: block; object-fit: contain;",
+      ) %>
+      <%= image_tag(
+        "angela-dibujo-cropped-7.png",
+        alt: "Drawing of Angela",
+        style: "max-width: 30vw; max-height: auto; display: block;",
+        ) %>
+    </div>
+  <div class="w-100 rounded-edge bg-body-tertiary" style="margin-top: -0.5px;"></div>
 </div>
-<% end %>
 
-
-<div class="row align-items-center justify-content-around bg-secondary">
-  <div class="image-box text-center pb-3 pb-lg-0 order-lg-2", style="max-width: 33vw;">
+<div class="row align-items-center justify-content-around bg-secondary p-4">
+  <div class="image-box text-center pb-4 pb-lg-0 order-lg-2", style="max-width: 33vw;">
     <%= image_tag("point-at-map-cropped-nobackground-3.png") %>
   </div>
   <div class="order-lg-1", style="max-width: 33vw;">
-    <h3 class="text-center pb-3">Verapax</h3>
+    <h3 class="text-center pb-4">Verapax</h3>
     <p>
       Collaborative, participatory, empowering, and transformational approach to research, and evaluation.
     </p>
@@ -29,89 +30,35 @@
     </p>
   </div>
 </div>
+</div>
 
-<div class="row align-items-center bg-verapax-yellow">
-  <div class="col-lg-6 image-box text-center pb-3 pb-lg-0">
-    <%= image_tag("our-name-BE-KIND-11-aug-636x636.jpg") %>
+<div class="row align-items-center justify-content-around bg-body-tertiary p-4">
+  <div class="image-box text-center pb-4 pb-lg-0", style="max-width: 33vw;">
+    <%= image_tag("panel-cropped-nobackground-9.png", alt: "Panel speaking in front of audience") %>
   </div>
   <div class="col-lg-6">
-    <h3 class="text-center pb-3">Our Name Means</h3>
+    <h3 class="text-center pb-4">Our Name Means</h3>
     <p>
       The spirit of our name Verapax reflects our values, where we come from and the knowledge of our ancestors.
     </p>
   </div>
 </div>
 
-<div class="row align-items-center">
-  <div class="col-lg-6 image-box text-center pb-3 pb-lg-0 order-lg-2">
-    <%= image_tag("our-approach-MAPPING-spaces-Aug11-636x636.jpg") %>
-  </div>
-  <div class="col-lg-6 order-lg-1">
-    <h3 class="text-center pb-3">Our Approach</h3>
-    <p>
-      We service small to mid-sized not-for-profit organizations and institutions of teaching & learning. We
-      work with our clients to develop their organizational leadership and evaluative thinking throughout the
-      processes of designing, implementing, and evaluating their initiatives.
-    </p>
-    <div class="d-flex pb-2 pb-sm-0">
-      <%= link_to "Read More", our_approach_path, class: "btn btn-sm btn-secondary ms-auto text-white" %>
-    </div>
-  </div>
-</div>
+<div class="bg-verapax-yellow p-4">
+  <h1 class="text-center">Our Services</h1>
 
-<div class="row align-items-center">
-  <div class="col-lg-6 image-box text-center pb-3 pb-lg-0">
-    <%= image_tag("we-we-work-with-11-aug-636x636.jpg") %>
-  </div>
-  <div class="col-lg-6 lh-sm">
-    <h3 class="text-center pb-3">Who We Work With</h3>
-    <p>
-      We work with entities that embrace situated, participatory, collaborative and empowerment approaches to
-      community or social development.
-    </p>
-    <div class="d-flex pb-2 pb-sm-0">
-      <%= link_to "Read More", who_we_work_with_path, class: "btn btn-sm btn-secondary ms-auto text-white" %>
+  <div class="d-flex align-items-top justify-content-around">
+    <div class="bg-body-tertiary text-center" style="height: 20vh; width: 10vw;">
+      Research
     </div>
-  </div>
-</div>
-
-<div class="row align-items-center">
-  <div class="col-lg-6 image-box text-center pb-3 pb-lg-0 order-lg-2">
-    <%= image_tag("P-Badge-Pushpin-Red-WhiteFill-450-RGB-636x636.jpg") %>
-  </div>
-  <div class="col-lg-6 order-lg-1">
-    <h3 class="text-center pb-3">People at Verapax</h3>
-    <div class="d-flex pb-2 pb-sm-0">
-      <%= link_to "Read More", our_people_path, class: "btn btn-sm btn-secondary ms-auto text-white" %>
+    <div class="bg-body-tertiary text-center" style="height: 20vh; width: 10vw;">
+      Evaluation
     </div>
-  </div>
-</div>
-
-<div class="row align-items-center">
-  <div class="col-lg-6 image-box text-center pb-3 pb-lg-0">
-    <%= image_tag("Angela-C-verapax-web-8Aug-cropped-636x636.jpg") %>
-  </div>
-  <div class="col-lg-6">
-    <h3 class="text-center pb-3">Connect with Us</h3>
-    <div class="d-flex pb-2 pb-sm-0">
-      <%= link_to("Connect with Verapax", new_contact_path, class: "btn btn-sm btn-secondary ms-auto text-white") %>
+    <div class="bg-body-tertiary text-center" style="height: 20vh; width: 10vw;">
+      Another Service
     </div>
-  </div>
-</div>
-
-<div class="row align-items-center mb-3">
-  <div class="col-lg-6 image-box text-center pb-3 pb-lg-0 order-lg-2">
-    <%= image_tag("knowledge-exchange-11-aug-636x636.jpg") %>
-  </div>
-  <div class="col-lg-6 order-lg-1">
-    <h3 class="text-center pb-3">Life-Long Learning</h3>
-    <p>
-      Our evaluation practice is relational, contextualized, and consistent with the knowledges, expectations of
-      people – especially those historically and systemically invisibilized -- in the communities we do evaluation
-      with.
-    </p>
-    <div class="d-flex pb-2 pb-sm-0">
-      <%= link_to "Read More", life_long_learning_path, class: "btn btn-sm btn-secondary ms-auto text-white" %>
+    <div class="bg-body-tertiary text-center" style="height: 20vh; width: 10vw;">
+      And Another Service
     </div>
   </div>
 </div>

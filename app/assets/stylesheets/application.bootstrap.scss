@@ -12,14 +12,15 @@ $body-tertiary-bg: #8a6fb5;
 // https://nicolaslule.com/responsive-full-width-hero-image-using-flex/
 .hero {
   @extend .mt-n4;
+  // background-color: $tertiary;
   width: 100%;
 
-  display: flex;
-  // Darker: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  // Lighter: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-  // background-image: url("mapa-mundo-con-marcadores-verapax-auto-crop-white-background-1440x768.jpg");
-  align-items: center;
-  justify-content: start;
+  // display: flex;
+  // // Darker: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  // // Lighter: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+  // // background-image: url("mapa-mundo-con-marcadores-verapax-auto-crop-white-background-1440x768.jpg");
+  // align-items: center;
+  // justify-content: start;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -143,4 +144,14 @@ i.invert-icons {
 
 .bg-verapax-yellow {
   background-color: $verapax-yellow;
+}
+
+.rounded-edge {
+  height: 200px;
+  aspect-ratio: 3/2;
+  /* update the 85% to control the curvature
+     you can also update the 50% to control the position
+  */
+  clip-path: ellipse(75% 100% at 50% 0%);
+  background: $body-tertiary-bg;
 }

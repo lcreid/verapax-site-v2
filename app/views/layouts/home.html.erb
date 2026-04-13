@@ -4,7 +4,6 @@
 
   <body>
   <%= render partial: "navbar" %>
-  <%= yield :hero %>
   <%= yield %>
   <% unless current_page?(new_contact_path) %>
   <div class="sticky-bottom d-flex">
