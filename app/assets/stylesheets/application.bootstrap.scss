@@ -4,6 +4,7 @@ $paragraph-font: 1.375rem;
 $primary: #3b2c56;
 $secondary: #179ac0;
 $tertiary: #8a6fb5;
+$verapax-yellow: #bd7100;
 
 $body-tertiary-color: #8a6fb5;
 $body-tertiary-bg: #8a6fb5;
@@ -140,4 +141,8 @@ $body-tertiary-bg: #8a6fb5;
 .invert-icons i,
 i.invert-icons {
   filter: invert(1);
+}
+
+.bg-verapax-yellow {
+  background-color: $verapax-yellow;
 }
