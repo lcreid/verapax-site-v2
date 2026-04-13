@@ -11,9 +11,7 @@ $body-tertiary-bg: #8a6fb5;
 
 // https://nicolaslule.com/responsive-full-width-hero-image-using-flex/
 .hero {
-  @extend .mt-n3;
-  background-color: $tertiary;
-  height: 33vh;
+  @extend .mt-n4;
   width: 100%;
 
   display: flex;
