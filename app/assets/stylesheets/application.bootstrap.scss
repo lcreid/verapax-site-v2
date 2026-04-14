@@ -321,3 +321,10 @@ i.invert-icons {
   );
   background: $body-tertiary-bg;
 }
+
+.footer {
+  & .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
