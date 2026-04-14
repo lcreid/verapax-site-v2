@@ -146,12 +146,178 @@ i.invert-icons {
   background-color: $verapax-yellow;
 }
 
-.rounded-edge {
+.concave-up {
+  position: relative;
   height: 200px;
-  aspect-ratio: 3/2;
-  /* update the 85% to control the curvature
-     you can also update the 50% to control the position
-  */
-  clip-path: ellipse(75% 100% at 50% 0%);
+  overflow: hidden;
+}
+
+.concave-up::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 200px;
+  background: $body-tertiary-bg;
+  border-radius: 50%;
+}
+
+.concave-down {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.concave-down::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 200px;
+  background: $body-tertiary-bg;
+  border-radius: 50%;
+}
+
+.bg-service {
+  clip-path: shape(
+    from 20.1px 9.1px,
+    curve to calc(2.08% + 28.75px) 6.5px with calc(0% + 30px) 8px,
+    curve to calc(6.25% + 26.25px) 3.5px with calc(4.17% + 27.5px) 5px,
+    curve to calc(10.42% + 23.75px) 12.5px with calc(8.33% + 25px) 2px,
+    curve to calc(14.58% + 21.25px) 23.5px with calc(12.5% + 22.5px) 23px,
+    curve to calc(18.75% + 18.75px) 17px with calc(16.67% + 20px) 24px,
+    curve to calc(22.92% + 16.25px) 6px with calc(20.83% + 17.5px) 10px,
+    curve to calc(27.08% + 13.75px) 14.5px with calc(25% + 15px) 2px,
+    curve to calc(31.25% + 11.25px) 25px with calc(29.17% + 12.5px) 27px,
+    curve to calc(35.42% + 8.75px) 13px with calc(33.33% + 10px) 23px,
+    curve to calc(39.58% + 6.25px) 8.5px with calc(37.5% + 7.5px) 3px,
+    curve to calc(43.75% + 3.75px) 13.5px with calc(41.67% + 5px) 14px,
+    curve to calc(47.92% + 1.25px) 9px with calc(45.83% + 2.5px) 13px,
+    curve to calc(52.08% + -1.25px) 8.5px with calc(50% + 0px) 5px,
+    curve to calc(56.25% + -3.75px) 20px with calc(54.17% + -2.5px) 12px,
+    curve to calc(60.42% + -6.25px) 27.5px with calc(58.33% + -5px) 28px,
+    curve to calc(64.58% + -8.75px) 27px with calc(62.5% + -7.5px) 27px,
+    curve to calc(68.75% + -11.25px) 21.5px with calc(66.67% + -10px) 27px,
+    curve to calc(72.92% + -13.75px) 19px with calc(70.83% + -12.5px) 16px,
+    curve to calc(77.08% + -16.25px) 16px with calc(75% + -15px) 22px,
+    curve to calc(81.25% + -18.75px) 9.5px with calc(79.17% + -17.5px) 10px,
+    curve to calc(85.42% + -21.25px) 5.5px with calc(83.33% + -20px) 9px,
+    curve to calc(89.58% + -23.75px) 1.5px with calc(87.5% + -22.5px) 2px,
+    curve to calc(93.75% + -26.25px) 14.5px with calc(91.67% + -25px) 1px,
+    curve to calc(97.92% + -28.75px) 25.5px with calc(95.83% + -27.5px) 28px,
+    curve to calc(100% - 26.11px) 22.61px with calc(100% - 30px) 23px,
+    curve to calc(100% - 18.11px) 26.11px with calc(100% - 22.22px) 22.22px,
+    curve to calc(100% - 19.5px) calc(2.94% + 28.24px) with calc(100% - 14px)
+      calc(0% + 30px),
+    curve to calc(100% - 17.5px) calc(8.82% + 24.71px) with calc(100% - 25px)
+      calc(5.88% + 26.47px),
+    curve to calc(100% - 13.5px) calc(14.71% + 21.18px) with calc(100% - 10px)
+      calc(11.76% + 22.94px),
+    curve to calc(100% - 22px) calc(20.59% + 17.65px) with calc(100% - 17px)
+      calc(17.65% + 19.41px),
+    curve to calc(100% - 22.5px) calc(26.47% + 14.12px) with calc(100% - 27px)
+      calc(23.53% + 15.88px),
+    curve to calc(100% - 10.5px) calc(32.35% + 10.59px) with calc(100% - 18px)
+      calc(29.41% + 12.35px),
+    curve to calc(100% - 13.5px) calc(38.24% + 7.06px) with calc(100% - 3px)
+      calc(35.29% + 8.82px),
+    curve to calc(100% - 23px) calc(44.12% + 3.53px) with calc(100% - 24px)
+      calc(41.18% + 5.29px),
+    curve to calc(100% - 18px) calc(50% + 0px) with calc(100% - 22px)
+      calc(47.06% + 1.76px),
+    curve to calc(100% - 20.5px) calc(55.88% + -3.53px) with calc(100% - 14px)
+      calc(52.94% + -1.76px),
+    curve to calc(100% - 21.5px) calc(61.76% + -7.06px) with calc(100% - 27px)
+      calc(58.82% + -5.29px),
+    curve to calc(100% - 10.5px) calc(67.65% + -10.59px) with calc(100% - 16px)
+      calc(64.71% + -8.82px),
+    curve to calc(100% - 10px) calc(73.53% + -14.12px) with calc(100% - 5px)
+      calc(70.59% + -12.35px),
+    curve to calc(100% - 20.5px) calc(79.41% + -17.65px) with calc(100% - 15px)
+      calc(76.47% + -15.88px),
+    curve to calc(100% - 22px) calc(85.29% + -21.18px) with calc(100% - 26px)
+      calc(82.35% + -19.41px),
+    curve to calc(100% - 21.5px) calc(91.18% + -24.71px) with calc(100% - 18px)
+      calc(88.24% + -22.94px),
+    curve to calc(100% - 27px) calc(97.06% + -28.24px) with calc(100% - 25px)
+      calc(94.12% + -26.47px),
+    curve to calc(100% - 26.67px) calc(100% - 27.17px) with calc(100% - 29px)
+      calc(100% - 30px),
+    curve to calc(100% - 27.17px) calc(100% - 26.17px) with calc(100% - 24.34px)
+      calc(100% - 24.34px),
+    curve to calc(97.92% - 28.75px) calc(100% - 26.5px) with calc(100% - 30px)
+      calc(100% - 28px),
+    curve to calc(93.75% - 26.25px) calc(100% - 14px) with calc(95.83% - 27.5px)
+      calc(100% - 25px),
+    curve to calc(89.58% - 23.75px) calc(100% - 15px) with calc(91.67% - 25px)
+      calc(100% - 3px),
+    curve to calc(85.42% - 21.25px) calc(100% - 19.5px) with
+      calc(87.5% - 22.5px) calc(100% - 27px),
+    curve to calc(81.25% - 18.75px) calc(100% - 20.5px) with calc(83.33% - 20px)
+      calc(100% - 12px),
+    curve to calc(77.08% - 16.25px) calc(100% - 16.5px) with
+      calc(79.17% - 17.5px) calc(100% - 29px),
+    curve to calc(72.92% - 13.75px) calc(100% - 5px) with calc(75% - 15px)
+      calc(100% - 4px),
+    curve to calc(68.75% - 11.25px) calc(100% - 12px) with calc(70.83% - 12.5px)
+      calc(100% - 6px),
+    curve to calc(64.58% - 8.75px) calc(100% - 10.5px) with calc(66.67% - 10px)
+      calc(100% - 18px),
+    curve to calc(60.42% - 6.25px) calc(100% - 7.5px) with calc(62.5% - 7.5px)
+      calc(100% - 3px),
+    curve to calc(56.25% - 3.75px) calc(100% - 8.5px) with calc(58.33% - 5px)
+      calc(100% - 12px),
+    curve to calc(52.08% - 1.25px) calc(100% - 14px) with calc(54.17% - 2.5px)
+      calc(100% - 5px),
+    curve to calc(47.92% - -1.25px) calc(100% - 12px) with calc(50% - 0px)
+      calc(100% - 23px),
+    curve to calc(43.75% - -3.75px) calc(100% - 4px) with calc(45.83% - -2.5px)
+      calc(100% - 1px),
+    curve to calc(39.58% - -6.25px) calc(100% - 8px) with calc(41.67% - -5px)
+      calc(100% - 7px),
+    curve to calc(35.42% - -8.75px) calc(100% - 12px) with calc(37.5% - -7.5px)
+      calc(100% - 9px),
+    curve to calc(31.25% - -11.25px) calc(100% - 15px) with calc(33.33% - -10px)
+      calc(100% - 15px),
+    curve to calc(27.08% - -13.75px) calc(100% - 21px) with
+      calc(29.17% - -12.5px) calc(100% - 15px),
+    curve to calc(22.92% - -16.25px) calc(100% - 20.5px) with calc(25% - -15px)
+      calc(100% - 27px),
+    curve to calc(18.75% - -18.75px) calc(100% - 14.5px) with
+      calc(20.83% - -17.5px) calc(100% - 14px),
+    curve to calc(14.58% - -21.25px) calc(100% - 8px) with calc(16.67% - -20px)
+      calc(100% - 15px),
+    curve to calc(10.42% - -23.75px) calc(100% - 6px) with calc(12.5% - -22.5px)
+      calc(100% - 1px),
+    curve to calc(6.25% - -26.25px) calc(100% - 11.5px) with calc(8.33% - -25px)
+      calc(100% - 11px),
+    curve to calc(2.08% - -28.75px) calc(100% - 9.5px) with
+      calc(4.17% - -27.5px) calc(100% - 12px),
+    curve to 25.76px calc(100% - 14.26px) with 30px calc(100% - 7px),
+    curve to 11.76px calc(100% - 25.76px) with 21.51px calc(100% - 21.51px),
+    curve to 12.5px calc(97.06% - 28.24px) with 2px calc(100% - 30px),
+    curve to 19px calc(91.18% - 24.71px) with 23px calc(94.12% - 26.47px),
+    curve to 13px calc(85.29% - 21.18px) with 15px calc(88.24% - 22.94px),
+    curve to 7px calc(79.41% - 17.65px) with 11px calc(82.35% - 19.41px),
+    curve to 12px calc(73.53% - 14.12px) with 3px calc(76.47% - 15.88px),
+    curve to 20px calc(67.65% - 10.59px) with 21px calc(70.59% - 12.35px),
+    curve to 23.5px calc(61.76% - 7.06px) with 19px calc(64.71% - 8.82px),
+    curve to 25.5px calc(55.88% - 3.53px) with 28px calc(58.82% - 5.29px),
+    curve to 13px calc(50% - 0px) with 23px calc(52.94% - 1.76px),
+    curve to 12.5px calc(44.12% - -3.53px) with 3px calc(47.06% - -1.76px),
+    curve to 11.5px calc(38.24% - -7.06px) with 22px calc(41.18% - -5.29px),
+    curve to 14px calc(32.35% - -10.59px) with 1px calc(35.29% - -8.82px),
+    curve to 25.5px calc(26.47% - -14.12px) with 27px calc(29.41% - -12.35px),
+    curve to 23.5px calc(20.59% - -17.65px) with 24px calc(23.53% - -15.88px),
+    curve to 22.5px calc(14.71% - -21.18px) with 23px calc(17.65% - -19.41px),
+    curve to 12.5px calc(8.82% - -24.71px) with 22px calc(11.76% - -22.94px),
+    curve to 11px calc(2.94% - -28.24px) with 3px calc(5.88% - -26.47px),
+    curve to 14.6px 20.1px with 19px 30px,
+    curve to 20.1px 9.1px with 10.2px 10.2px
+  );
   background: $body-tertiary-bg;
 }
