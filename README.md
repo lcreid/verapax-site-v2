@@ -22,3 +22,7 @@ ChatGPT gave this, but it wasn't needed, because the concave versions by themsel
   clip-path: ellipse(75% 100% at 50% 100%);
 }
 ```
+
+### Font
+
+Aloja -- I got it from here: https://www.dafontfree.io/aloja-handwritten-font-free-download/#google_vignette.
