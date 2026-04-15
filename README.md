@@ -23,6 +23,10 @@ ChatGPT gave this, but it wasn't needed, because the concave versions by themsel
 }
 ```
 
-### Font
+## Font
 
 Aloja -- I got it from here: https://www.dafontfree.io/aloja-handwritten-font-free-download/#google_vignette.
+
+## Favicons
+
+https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
