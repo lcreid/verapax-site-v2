@@ -1,45 +1,50 @@
-<div class="d-flex flex-column mb-4">
+<div class="d-flex flex-column">
   <div class="hero">
-    <div class="d-flex justify-content-around bg-body-tertiary">
-      <div class="text p-2 p-md-5">
+    <div class="d-flex justify-content-around align-items-center bg-body-tertiary">
+      <div class="mx-4" style="width: 25vw;">
         <h1>Contact Us</h1>
       </div>
+      <%= image_tag(
+        "angela-dibujo-cropped-nobackground-7.png",
+        alt: "Drawing of Angela",
+        style: "max-width: 30vw; max-height: auto; display: block;",
+        ) %>
     </div>
   </div>
 </div>
-<div class="col-md-8 offset-md-2">
-  <div class="row">
-    <div class="col-md-6 mx-auto mx-md-0">
-      <h4>Use Our Secure Contact Form</h4>
-      <%= bootstrap_form_with(model: @contact, class: "mb-4") do |contact_form| %>
-        <%= contact_form.text_field(:name) %>
-        <%= contact_form.email_field(
-          :email_address,
-          help: email_help,
-          ) %>
-        <%= contact_form.text_area(:message) %>
-        <%= contact_form.submit("Send", extra_class: "text-white") %>
-      <% end %>
-    </div>
-    <div class="col-md-6 mx-auto mx-md-0">
-      <h4>E-Mail</h4>
-      <p>
-        Send us an e-mail at <a href="mailto:info@verapax.org?subject=Information%20Request">info@verapax.org</a>.
-      </p>
-      <p class="small text-muted">
-        When you click on the link, a window will open in your e-mail program.
-        The e-mail program's window might be hidden behind another window.
-      </p>
-      <h4>Book a Free 30 Minute Consultation</h4>
-      <p>
-        Book your consultation on our
-        <%= link_to("Calendly", "https://calendly.com/verapax/contactangela") %>
-      </p>
-      <h4>Mailing Address</h4>
-      <address>
-        312 Main St. 2nd Floor<br/>
-        Vancouver BC  V6A 2T2
-      </address>
-    </div>
+
+<div class="concave-up bg-secondary"></div>
+<div class="d-flex align-items-center justify-content-around bg-secondary text-white">
+  <div class="p-4" style="width: 40vw;">
+    <h4>Use Our Secure Contact Form</h4>
+    <%= bootstrap_form_with(model: @contact, class: "mb-4") do |contact_form| %>
+      <%= contact_form.text_field(:name) %>
+      <%= contact_form.email_field(
+        :email_address,
+        help: email_help,
+        ) %>
+      <%= contact_form.text_area(:message) %>
+      <%= contact_form.submit("Send", class: "text-white btn btn-primary") %>
+    <% end %>
+  </div>
+  <div class="p-4" style="width: 40vw;">
+    <h4>E-Mail</h4>
+    <p>
+      Send us an e-mail at <a href="mailto:info@verapax.org?subject=Information%20Request">info@verapax.org</a>.
+    </p>
+    <p class="small text-muted">
+      When you click on the link, a window will open in your e-mail program.
+      The e-mail program's window might be hidden behind another window.
+    </p>
+    <h4>Book a Free 30 Minute Consultation</h4>
+    <p>
+      Book your consultation on our
+      <%= link_to("Calendly", "https://calendly.com/verapax/contactangela") %>
+    </p>
+    <h4>Mailing Address</h4>
+    <address>
+      312 Main St. 2nd Floor<br/>
+      Vancouver BC  V6A 2T2
+    </address>
   </div>
 </div>
