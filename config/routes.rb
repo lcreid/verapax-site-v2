@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get "who-we-work-with", to: "home#who_we_work_with"
   get "our-people", to: "home#our_people"
   get "life-long-learning", to: "home#life_long_learning"
+  get "privacy-policy", to: "home#privacy_policy"
 
   resources :contacts, only: [ :create, :new, :show ]
   get "contacts/thank-you", to: "contacts#thank_you"

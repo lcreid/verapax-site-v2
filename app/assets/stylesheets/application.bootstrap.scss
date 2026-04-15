@@ -146,6 +146,7 @@ $headings-font-family: "Aloja-Light", sans-serif;
 /* Inverts a dark icon to make it white */
 .navbar-toggler-icon,
 .navbar i,
+.navbar-nav i,
 .invert-icons i,
 i.invert-icons {
   filter: invert(1);
@@ -221,4 +222,25 @@ i.invert-icons {
   .text-muted {
     color: white !important;
   }
+}
+
+.markdown {
+  a {
+    @extend .link-light;
+  }
+}
+
+.content-wrapper {
+  /* Mobile-first: Full width by default */
+  width: 100%;
+
+  /* Large screens: Cap the width and center it */
+  max-width: 768px; /* Adjust based on desired "narrowness" */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Padding for mobile devices to keep text off edges */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
 }

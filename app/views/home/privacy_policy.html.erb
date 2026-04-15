@@ -1,0 +1,25 @@
+<div class="d-flex flex-column">
+  <div class="hero">
+    <div class="d-flex justify-content-around align-items-center bg-body-tertiary">
+      <div class="mx-4" style="width: 25vw;">
+        <h1>Privacy and Confidentiality Policy</h1>
+      </div>
+      <%= image_tag(
+        "angela-dibujo-cropped-nobackground-7.png",
+        alt: "Drawing of Angela",
+        style: "max-width: 30vw; max-height: auto; display: block;",
+        ) %>
+    </div>
+  </div>
+</div>
+
+<div class="concave-up bg-secondary"></div>
+
+<%# The style because we get 1rem margin on the bottom of the <p>, so make the background cover the margin. %>
+<div class="bg-secondary text-light markdown" style="display: flow-root;">
+  <div class="content-wrapper">
+    <%= render partial: "privacy_policy" %>
+  </div>
+</div>
+
+<%= render partial: "footer" %>

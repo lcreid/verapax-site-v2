@@ -23,8 +23,11 @@
         :email_address,
         help: email_help,
         ) %>
-      <%= contact_form.text_area(:message) %>
-      <%= contact_form.submit("Send", class: "btn btn-outline-light") %>
+      <%= contact_form.text_area(:message, style: "min-height: 5lh;") %>
+      <div class="d-flex justify-content-between align-items-center">
+        <%= contact_form.submit("Send", class: "btn btn-outline-light") %>
+        <%= link_to("Privacy and Confidentiality Policy", privacy_policy_path, class: "link-light") %>
+      </div>
     <% end %>
   </div>
   <div class="p-4" style="width: 40vw;">
