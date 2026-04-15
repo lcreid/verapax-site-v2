@@ -34,7 +34,7 @@ We regularly review our retention periods for personal and confidential informat
 
 ## Who has access to your information?
 
-Access to your personal and confidential information within Verapax is strictly limited to individuals who require the information to perform a specific job. ## We will not sell or share your information with third parties for marketing purposes or other unrelated purposes unless you have requested us to do so. All individuals with access are bound by privacy and confidentiality obligations.
+Access to your personal and confidential information within Verapax is strictly limited to individuals who require the information to perform a specific job. **We will not sell or share your information with third parties for marketing purposes or other unrelated purposes unless you have requested us to do so.** All individuals with access are bound by privacy and confidentiality obligations.
 
 ## Marketing
 
