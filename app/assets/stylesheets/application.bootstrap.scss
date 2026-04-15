@@ -214,3 +214,11 @@ i.invert-icons {
   );
   background: $body-tertiary-bg;
 }
+
+// Hack to get the right colour on the form on the contact page.
+.contact-form {
+  .form-text,
+  .text-muted {
+    color: white !important;
+  }
+}

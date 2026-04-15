@@ -15,7 +15,7 @@
 
 <div class="concave-up bg-secondary"></div>
 <div class="d-flex align-items-center justify-content-around bg-secondary text-white">
-  <div class="p-4" style="width: 40vw;">
+  <div class="p-4 contact-form" style="width: 40vw;">
     <h4>Use Our Secure Contact Form</h4>
     <%= bootstrap_form_with(model: @contact, class: "mb-4") do |contact_form| %>
       <%= contact_form.text_field(:name) %>
@@ -24,14 +24,14 @@
         help: email_help,
         ) %>
       <%= contact_form.text_area(:message) %>
-      <%= contact_form.submit("Send", class: "text-white btn btn-primary") %>
+      <%= contact_form.submit("Send", class: "btn btn-outline-light") %>
     <% end %>
   </div>
   <div class="p-4" style="width: 40vw;">
     <h4>Book a Free 30 Minute Consultation</h4>
     <p class="mb-4">
       Book your consultation on our
-      <%= link_to("Calendly", "https://calendly.com/verapax/contactangela") %>
+      <%= link_to("Calendly", "https://calendly.com/verapax/contactangela", class: "link-light") %>
     </p>
     <h4>Mailing Address</h4>
     <h5>Canadian Office</h5>
@@ -48,3 +48,5 @@
     </address>
   </div>
 </div>
+
+<%= render partial: "footer" %>

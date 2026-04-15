@@ -74,22 +74,4 @@
   </div>
 </div>
 
-<div class="container-fluid align-items-center bg-black invert-icons footer">
-  <div class="d-flex justify-content-center py-4">
-    <a href="https://instagram.com/verapax_" class="mx-3" target="_blank">
-      <i class="bi bi-instagram h2"><span class="visually-hidden">Instagram</span></i>
-    </a>
-    <a href="https://www.linkedin.com/company/verapax-evaluations/" class="mx-3" target="_blank">
-      <i class="bi bi-linkedin h2"><span class="visually-hidden">LinkedIn</span></i>
-    </a>
-    <a href="https://www.youtube.com/@video.verapax/" class="mx-3" target="_blank">
-      <i class="bi bi-youtube h2"><span class="visually-hidden">YouTube</span></i>
-    </a>
-  </div>
-  <hr class="border border-white border-1 opacity-100 my-0" />
-  <div class="grid py-4">
-    <%= link_to("Privacy Policy", "#", class: "text-white text-center mx-5") %>
-    <%= render partial: "acknowledgement" %>
-    <%= link_to("Contact Us", new_contact_path, class: "text-white text-center mx-5") %>
-  </div>
-</div>
+<%= render partial: "footer" %>
