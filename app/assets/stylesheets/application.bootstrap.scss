@@ -18,18 +18,9 @@ $body-tertiary-bg: #8a6fb5;
 
 $headings-font-family: "Aloja-Light", sans-serif;
 
-// https://nicolaslule.com/responsive-full-width-hero-image-using-flex/
 .hero {
   @extend .mt-n4;
-  // background-color: $tertiary;
   width: 100%;
-
-  // display: flex;
-  // // Darker: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  // // Lighter: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-  // // background-image: url("mapa-mundo-con-marcadores-verapax-auto-crop-white-background-1440x768.jpg");
-  // align-items: center;
-  // justify-content: start;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -212,6 +203,7 @@ i.invert-icons {
     close
   );
   background: $body-tertiary-bg;
+  aspect-ratio: 153 / 206;
 }
 
 // Hack to get the right colour on the form on the contact page.
@@ -241,4 +233,43 @@ i.invert-icons {
   padding-left: 1rem;
   padding-right: 1rem;
   box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+/* 1 across */
+.grid-max-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+/* 2 across */
+@include media-breakpoint-up(md) {
+  .grid-max-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .grid-max-4 {
+    /* 4 across by default (e.g., desktop) */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid-max-2 {
+  display: grid;
+  gap: 2rem;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr;
+}
+
+@include media-breakpoint-up(md) {
+  .grid-max-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-centred {
+  place-items: center;
 }
