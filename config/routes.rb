@@ -26,4 +26,6 @@ Rails.application.routes.draw do
   get "contacts/thank-you", to: "contacts#thank_you"
 
   get "dashboard", to: "dashboard#show"
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end
