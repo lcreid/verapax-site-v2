@@ -23,12 +23,9 @@
   </div>
   <div class="order-md-1">
     <h3 class="text-center pb-4">Verapax</h3>
-    <p>
-      Collaborative, participatory, empowering, and transformational approach to research, and evaluation.
-    </p>
-    <p>
-      A boutique, community-based, community-centred consulting firm for equitable systems change.
-    </p>
+    <p>We are a purpose-driven, small consultancy firm registered in Canada and Guatemala. </p>
+    <p>We deliver research, project design, evaluation, and knowledge mobilization strategies locally and globally.</p>
+    <p>We are committed to delivering rigorous, relevant, accessible, and impactful professional services. </p>
   </div>
 </div>
 <div class="concave-down bg-secondary"></div>
@@ -38,17 +35,19 @@
   <div class="image-box text-center pb-4 pb-lg-0 p-4">
     <%= image_tag("panel-cropped-nobackground-9.png", alt: "Panel speaking in front of audience") %>
   </div>
-  <div class="">
-    <h3 class="text-center pb-4">Our Name Means</h3>
-    <p>
-      The spirit of our name Verapax reflects our values, where we come from and the knowledge of our ancestors.
-    </p>
+  <div class="d-flex flex-column">
+    <h3 class="text-center pb-4">Our Name and Guiding Principles</h3>
+    <p>The spirit of our name Verapax reflects our values, where we come from and the knowledge of our ancestors.</p>
+    <%= link_to("Learn More", verapax_means_path, class: "btn btn-secondary text-light ms-auto") %>
   </div>
 </div>
 
 <div class="concave-up bg-verapax-yellow"></div>
 <div class="bg-verapax-yellow p-4 text-white">
   <h1 class="text-center">Our Services</h1>
+  <div class="d-flex justify-content-center">
+    <%= link_to("Learn More", services_path, class: "btn btn-secondary text-center text-light") %>
+  </div>
 
   <div class="grid-max-4 grid-centred">
     <div class="blob-01 text-center pt-5" style="height: 40vh;">

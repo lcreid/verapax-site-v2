@@ -15,14 +15,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
-  get "verapax-means", to: "home#verapax_means"
-  get "our-approach", to: "home#our_approach"
-  get "who-we-work-with", to: "home#who_we_work_with"
-  get "our-people", to: "home#our_people"
-  get "life-long-learning", to: "home#life_long_learning"
-  get "privacy-policy", to: "home#privacy_policy"
   get "contact-us", to: "home#contact_us"
+  get "life-long-learning", to: "home#life_long_learning"
+  get "our-approach", to: "home#our_approach"
+  get "our-team", to: "home#our_team"
+  get "privacy-policy", to: "home#privacy_policy"
+  get "services", to: "home#services"
   get "thank-you", as: "contact_thank_you", to: "home#thank_you"
+  get "verapax-means", to: "home#verapax_means"
+  get "who-we-work-with", to: "home#who_we_work_with"
 
   resources :contacts, only: [ :create, :new, :show ]
 

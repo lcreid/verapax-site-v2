@@ -1,0 +1,81 @@
+<div class="d-flex flex-column">
+  <div class="hero">
+    <div class="d-flex justify-content-around bg-body-tertiary">
+      <%= image_tag(
+        "Logo-Verapax-text-white-nobackground-cropped-2026.png",
+        alt: "Verapax Logo",
+        class: "mx-4",
+        style: "width: 25vw; height: auto; display: block; object-fit: contain;",
+      ) %>
+      <%= image_tag(
+        "angela-dibujo-cropped-nobackground-7.png",
+        alt: "Drawing of Angela",
+        style: "max-width: 30vw; max-height: auto; display: block;",
+        ) %>
+    </div>
+  </div>
+</div>
+
+<div class="concave-up bg-secondary"></div>
+<div class="grid-max-2 grid-centred bg-secondary text-white px-2 px-sm-5">
+  <h2>Our Team</h2>
+  <p>Our director, principal consultant, team members, and collaborators are proven community-based professionals.
+    They possess relevant lived experiences that help Verapax design
+    and deliver strategies that acknowledge and promote the culture, values,
+    and aspirations of the organizations and the communities we work with.
+    We have extensive experience designing and implementing fit-for-context
+    and fit-for-purpose strategies in fast-paced and high-stakes environments. </p>
+  <p>We have subject-matter expertise in gender-based social development,
+    Indigenous knowledge systems, early childhood development, parenting support services,
+    public health information and education, water, sanitation, and hygiene (WASH) systems,
+    public legal information and education, entrepreneurship development, migration issues, and ecological systems.</p>
+</div>
+<div class="concave-down bg-secondary"></div>
+
+<div class="bg-body-tertiary"></div>
+<div class="grid-max-2 grid-centred bg-body-tertiary text-white px-2 px-sm-5 pb-2 pb-sm-5">
+  <h2>Our Team</h2>
+
+  <div>
+    <div class="mb-3">
+    <span class="fw-bold">Ángela Contreras</span><br/>
+    Founder, Director and Principal Consultant<br/>
+    <%= link_to("www.linkedin.com/in/angelam-contreras", target: "_blank") do %>
+      <i class="bi bi-linkedin invert-icons"><span class="visually-hidden">LinkedIn</span></i>
+    <% end %>
+    <%= mail_to("angela.contreras@verapax.org", class: "text-light px-2") %><br/>
+    </div>
+
+    <div class="mb-3">
+    Marcos R.C.<br/>
+    Global Projects Administrator<br/>
+    <%= mail_to("projects@verapax.org", class: "text-light") %><br/>
+    </div>
+
+    <div class="mb-3">
+    Antonio Contreras<br/>
+    Operations and Logistics<br/>
+    <%= mail_to("logistics@verapax.org", class: "text-light") %><br/>
+    </div>
+  </div>
+
+  <h3>Frequent Collaborators On Special Projects</h3>
+  <div class="d-flex flex-wrap">
+    <span class="px-2">Baasanbat Bat-erdene</span>
+    <span class="px-2">Esme Cruz</span>
+    <span class="px-2">Osiris López</span>
+    <span class="px-2">Ida Reiman</span>
+    <span class="px-2">Larry Reid</span>
+    <span class="px-2">Yumi Onozawa</span>
+    <span class="px-2">Bev Ma</span>
+    <span class="px-2">Farrah Chan</span>
+    <span class="px-2">Chonito Carillo</span>
+    <span class="px-2">Simeón Andrés Carrillo</span>
+    <span class="px-2">Adriana Contreras</span>
+    <span class="px-2">Adriana Maldonado</span>
+    <span class="px-2">Karla Contreras Rodríguez</span>
+    <span class="px-2">Silvana Contreras Rodríguez</span>
+  </div>
+</div>
+
+<%= render partial: "footer" %>

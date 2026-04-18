@@ -13,9 +13,9 @@
       <%= search_field_for_form(form:, class: "input-group px-2") %>
       <% end %>
 
-      <% unless current_page?(new_contact_path) %>
+      <% unless current_page?(contact_us_path) %>
       <div>
-        <%= link_to("Contact Us", new_contact_path, class: "btn btn-sm bg-secondary text-light") %>
+        <%= link_to("Contact Us", contact_us_path, class: "btn btn-sm bg-secondary text-light") %>
       </div>
       <% end %>
     </div>
@@ -24,6 +24,15 @@
       <ul class="navbar-nav ms-auto mb-2 mb-md-0">
         <li class="nav-item">
           <%= link_to_home(nav_link_attributes(root_path)) %>
+        </li>
+        <li class="nav-item">
+          <%= link_to("Our Name", verapax_means_path, **nav_link_attributes(verapax_means_path)) %>
+        </li>
+        <li class="nav-item">
+          <%= link_to("Services", services_path, **nav_link_attributes(services_path)) %>
+        </li>
+        <li class="nav-item">
+          <%= link_to("Our Team", our_team_path, **nav_link_attributes(our_team_path)) %>
         </li>
         <li class="nav-item">
           <%= link_to("Privacy Policy", privacy_policy_path, **nav_link_attributes(privacy_policy_path)) %>

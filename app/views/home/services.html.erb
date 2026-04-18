@@ -22,8 +22,20 @@
     <%= image_tag("taller-nobackground-12.png", alt: "Angela leading workshop in informal setting") %>
   </div>
   <div class="order-md-1">
-    <h2>Our Name and Guiding Principles</h2>
-    <%= render partial: "verapax_means" %>
+    <%= render partial: "services_01" %>
+    <%= link_to("Book a Free 15-Minute Exploration Call", contact_us_path, class: "btn btn-secondary btn-outline-light text-white") %>
+  </div>
+</div>
+
+<div class="concave-down bg-secondary"></div>
+
+<div class="bg-body-tertiary"></div>
+<div class="grid-max-2 grid-centred bg-body-tertiary text-white px-2 px-sm-5">
+  <div class="image-box text-center pb-4 pb-lg-0 p-4">
+    <%= image_tag("panel-cropped-nobackground-9.png", alt: "Panel speaking in front of audience") %>
+  </div>
+  <div class="d-flex flex-column">
+    <%= render partial: "services_02" %>
   </div>
 </div>
 
