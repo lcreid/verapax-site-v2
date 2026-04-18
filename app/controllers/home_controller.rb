@@ -10,8 +10,6 @@ class HomeController < ApplicationController
       We need your e-mail address to send you our response.
     HELP
 
-    @contact = Contact.new
-
-    render locals: { email_help:, previous: nil }
+    render locals: { email_help:, start_of_thread: nil }
   end
 end

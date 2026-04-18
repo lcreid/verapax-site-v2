@@ -1,10 +1,26 @@
-<div class="d-flex flex-column">
+<div class="container-fluid">
   <div>
-  <%= contact.message %>
+    <%= link_to(:back, class: "btn mb-4") do %>
+      <%= tag.i(class: "bi bi-chevron-left") %> Back
+    <% end %>
   </div>
-  <div class="align-self-end">
-    <p><small><%= contact.name %>, sent <%= contact.updated_at.iso8601 %></small></p>
-  </div>
+
+  <%= render partial: "message", locals: { contact: } %>
+
+  <% contact.replies.each do |reply| %>
+    <%= render partial: "message", locals: { contact: reply } %>
+  <% end %>
+
+  <fieldset class="border border-dark mb-4 p-1">
+    <%= bootstrap_form_with(model: Contact.new, class: "d-flex flex-column") do |contact_form| %>
+      <%= contact_form.hidden_field(:start_of_thread, value: start_of_thread.id) if start_of_thread.present? %>
+      <%= contact_form.hidden_field(:name) %>
+      <%= contact_form.hidden_field(:email_address) %>
+      <%= contact_form.text_area(:message, style: "min-height: 3lh;", hide_label: true) %>
+      <%= contact_form.submit("Reply", class: "btn btn-outline-dark btn-sm ms-auto") %>
+    <% end %>
+  </fieldset>
+
   <div>
     <%= link_to(:back, class: "btn") do %>
       <%= tag.i(class: "bi bi-chevron-left") %> Back

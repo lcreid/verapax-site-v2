@@ -1,0 +1,8 @@
+<div class="d-flex flex-column mb-4 p-1 border border-dark">
+  <div>
+  <%= contact.message %>
+  </div>
+  <div class="align-self-end">
+    <small><%= contact.name %>, sent <%= relative_time_in_words(contact.updated_at) %></small>
+  </div>
+</div>
