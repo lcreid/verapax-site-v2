@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_04_08_195509) do
+ActiveRecord::Schema[8.1].define(version: 2026_04_18_160825) do
   create_table "contacts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email_address"
     t.string "message"
     t.string "name"
+    t.integer "start_of_thread_id"
     t.datetime "updated_at", null: false
+    t.index ["start_of_thread_id"], name: "index_contacts_on_start_of_thread_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -37,5 +39,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_04_08_195509) do
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
+  add_foreign_key "contacts", "contacts", column: "start_of_thread_id"
   add_foreign_key "sessions", "users"
 end
