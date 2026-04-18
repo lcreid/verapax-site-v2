@@ -16,7 +16,11 @@ class ContactsController < ApplicationController
       params.require(:contact).permit(:name, :email_address, :message),
     )
 
-    redirect_to contacts_thank_you_path
+    if authenticated?
+      redirect_to contact_path(contact)
+    else
+      redirect_to contact_thank_you_path
+    end
   end
 
   def new
