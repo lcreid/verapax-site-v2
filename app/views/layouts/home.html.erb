@@ -5,9 +5,9 @@
   <body>
   <%= render partial: "navbar" %>
   <%= yield %>
-  <% unless current_page?(new_contact_path) %>
+  <% unless current_page?(contact_us_path) %>
   <div class="sticky-bottom d-flex">
-    <%= link_to(new_contact_path, class: "ms-auto floating-cta-button btn bg-secondary text-light border border-white") do %>
+    <%= link_to(contact_us_path, class: "ms-auto floating-cta-button btn bg-secondary text-light border border-white") do %>
       Contact Us<br/>
       <i class="bi bi-envelope"></i>
       <i class="bi bi-chat-square"></i>
