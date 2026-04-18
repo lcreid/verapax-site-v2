@@ -30,6 +30,9 @@
         </li>
         <% if authenticated? %>
         <li class="nav-item">
+          <%= link_to("Dashboard", dashboard_path, **nav_link_attributes(dashboard_path)) %>
+        </li>
+        <li class="nav-item">
           <%= sign_out_link(class: "nav-link") %>
         </li>
         <% end %>
