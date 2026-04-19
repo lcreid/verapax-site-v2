@@ -23,6 +23,8 @@ $headings-font-family: "Aloja-Light", sans-serif;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: calc(var(--concave-height) / 2);
+  background-color: $body-tertiary-bg;
 
   & h6,
   .h6,
@@ -145,40 +147,52 @@ i.invert-icons {
   background-color: $verapax-yellow;
 }
 
+.concave-down,
+.concave-down::after,
+.concave-up,
+.concave-up::before,
+.hero {
+  --concave-border-radius: 50%;
+  --concave-bottom: -50px;
+  --concave-height: 100px;
+  --concave-top: var(--concave-bottom);
+  --concave-width: 100%;
+}
+
 .concave-up {
   position: relative;
-  height: 200px;
+  height: calc(var(--concave-height) / 2);
   overflow: hidden;
 }
 
 .concave-up::before {
   content: "";
   position: absolute;
-  top: -100px;
+  top: var(--concave-top);
   left: 50%;
   transform: translateX(-50%);
-  width: 150%;
-  height: 200px;
+  width: var(--concave-width);
+  height: var(--concave-height);
   background: $body-tertiary-bg;
-  border-radius: 50%;
+  border-radius: var(--concave-border-radius);
 }
 
 .concave-down {
   position: relative;
-  height: 200px;
+  height: calc(var(--concave-height) / 2);
   overflow: hidden;
 }
 
 .concave-down::after {
   content: "";
   position: absolute;
-  bottom: -100px;
+  bottom: var(--concave-bottom);
   left: 50%;
   transform: translateX(-50%);
-  width: 150%;
-  height: 200px;
+  width: var(--concave-width);
+  height: var(--concave-height);
   background: $body-tertiary-bg;
-  border-radius: 50%;
+  border-radius: var(--concave-border-radius);
 }
 
 .footer {
