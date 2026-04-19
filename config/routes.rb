@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get "thank-you", as: "contact_thank_you", to: "home#thank_you"
   get "verapax-means", to: "home#verapax_means"
   get "who-we-work-with", to: "home#who_we_work_with"
+  post "create_contact", to: "home#create_contact"
 
   resources :contacts, only: [ :create, :new, :show ]
 

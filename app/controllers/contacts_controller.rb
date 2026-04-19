@@ -15,11 +15,7 @@ class ContactsController < ApplicationController
       params.require(:contact).permit(:name, :email_address, :message, :start_of_thread_id),
     )
 
-    if authenticated?
-      redirect_to contact_path(start_of_thread || contact)
-    else
-      redirect_to contact_thank_you_path
-    end
+    redirect_to contact_path(start_of_thread || @contact)
   end
 
   def show

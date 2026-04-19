@@ -6,7 +6,7 @@ class ContactsTest < ActionDispatch::IntegrationTest
   test "unauthenticated user sends message and privileged user responds" do
     get(contact_us_path)
     assert_response :ok
-    post contacts_path, params: {
+    post create_contact_path, params: {
       contact: {
         name: "Random",
         email_address: "random@example.com",

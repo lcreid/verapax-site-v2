@@ -273,3 +273,9 @@ i.invert-icons {
 .grid-centred {
   place-items: center;
 }
+
+label.required:after {
+  content: " *";
+  color: red;
+  padding-left: 2px;
+}
