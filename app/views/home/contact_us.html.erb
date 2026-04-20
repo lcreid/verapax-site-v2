@@ -17,18 +17,7 @@
 <div class="d-flex align-items-center justify-content-around bg-secondary text-white">
   <div class="p-4 contact-form" style="width: 40vw;">
     <h4>Use Our Secure Contact Form</h4>
-    <%= bootstrap_form_with(model: @contact || Contact.new, class: "mb-4", html: { novalidate: true }, url: create_contact_path) do |contact_form| %>
-      <%= contact_form.text_field(:name) %>
-      <%= contact_form.email_field(
-        :email_address,
-        help: email_help,
-        ) %>
-      <%= contact_form.text_area(:message, style: "min-height: 5lh;") %>
-      <div class="d-flex justify-content-between align-items-center">
-        <%= contact_form.submit("Send", class: "btn btn-outline-light") %>
-        <%= link_to("Privacy and Confidentiality Policy", privacy_policy_path, class: "link-light") %>
-      </div>
-    <% end %>
+    <%= render partial: "contact_us_form", locals: { email_help:, start_of_thread: } %>
   </div>
   <div class="p-4" style="width: 40vw;">
     <h4>Book a Free 15-Minute Exploration Call</h4>

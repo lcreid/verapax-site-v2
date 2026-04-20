@@ -1,0 +1,23 @@
+<%= turbo_frame_tag :send_contact_us, target: '_top' do %>
+  <%= bootstrap_form_with(
+    model: @contact || Contact.new,
+    class: "mb-4",
+    html: { novalidate: true },
+    url: create_contact_path,
+  ) do |contact_form| %>
+    <%= turbo_frame_tag "recaptcha" do %>
+      <%= recaptcha_v3(action: "send_contact_us", site_key: ENV["RECAPTCHA_SITE_KEY"], turbo: true) %>
+    <% end %>
+
+    <%= contact_form.text_field(:name) %>
+    <%= contact_form.email_field(
+      :email_address,
+      help: email_help,
+      ) %>
+    <%= contact_form.text_area(:message, style: "min-height: 5lh;") %>
+    <div class="d-flex justify-content-between align-items-center">
+      <%= contact_form.submit("Send", class: "btn btn-outline-light") %>
+      <%= link_to("Privacy and Confidentiality Policy", privacy_policy_path, class: "link-light") %>
+    </div>
+  <% end %>
+<% end %>
