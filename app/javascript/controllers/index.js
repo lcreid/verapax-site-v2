@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import RecaptchaV2Controller from "./recaptcha_v2_controller"
+application.register("recaptcha-v2", RecaptchaV2Controller)

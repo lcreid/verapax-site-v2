@@ -10,17 +10,26 @@ class HomeController < ApplicationController
   end
 
   def create_contact
-    success = verify_recaptcha(action: "send_contact_us", minimum_score: 0.5, secret_key: ENV["RECAPTCHA_SECRET_KEY"])
-
     @contact = Contact.build(
       params.require(:contact).permit(:name, :email_address, :message, :start_of_thread_id),
     )
 
+    success = verify_recaptcha(action: "send_contact_us", minimum_score: 0.5, secret_key: ENV["RECAPTCHA_SECRET_KEY_V3"])
+    # success = false # Uncomment to force a test of V2.
+    success ||= verify_recaptcha(model: @contact, secret_key: ENV["RECAPTCHA_SECRET_KEY_V2"])
+
     if success && @contact.valid?(:unauthenticated) && @contact.save!
       redirect_to contact_thank_you_path
     else
-      Rails.logger.debug("rendering contact_us unprocessable_entity success: #{success}")
-      render "contact_us", locals: { email_help:, start_of_thread: nil }, status: :unprocessable_entity
+      Rails.logger.warn("rendering contact_us unprocessable_entity success: #{success}")
+      respond_to do |format|
+        format.html do
+          render "contact_us", locals: { email_help:, start_of_thread: nil }, status: :unprocessable_entity
+        end
+        format.turbo_stream do
+          render "contact_us", locals: { email_help:, start_of_thread: nil }, status: :unprocessable_entity
+        end
+      end
     end
   end
 

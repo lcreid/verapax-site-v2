@@ -4,9 +4,10 @@
     class: "mb-4",
     html: { novalidate: true },
     url: create_contact_path,
+    data: { turbo_stream: true },
   ) do |contact_form| %>
     <%= turbo_frame_tag "recaptcha" do %>
-      <%= recaptcha_v3(action: "send_contact_us", site_key: ENV["RECAPTCHA_SITE_KEY"], turbo: true) %>
+      <%= recaptcha_v3(action: "send_contact_us", site_key: ENV["RECAPTCHA_SITE_KEY_V3"], turbo: true) %>
     <% end %>
 
     <%= contact_form.text_field(:name) %>

@@ -1,0 +1,9 @@
+<%= turbo_stream.replace :send_contact_us, partial: "contact_us_form", locals: { email_help:, start_of_thread: } %>
+
+<%= turbo_stream.replace "recaptcha" do %>
+  <div class="mb-3"
+    id="recaptchaV2"
+    data-controller="recaptcha-v2"
+    data-recaptcha-v2-site-key-value="<%= ENV["RECAPTCHA_SITE_KEY_V2"] %>">
+  </div>
+<% end %>
