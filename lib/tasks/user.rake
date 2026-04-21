@@ -9,6 +9,7 @@ namespace :user do
         email_address: ENV["EMAIL_ADDRESS"],
         name: ENV["NAME"],
         password_digest: BCrypt::Password.create(password),
+        receives_contacts: ENV.fetch("RECEIVES_CONTACTS", true),
       )
       PasswordsMailer.reset(user).deliver_now
     end
