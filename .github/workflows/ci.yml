@@ -20,10 +20,10 @@ jobs:
 
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
-      
+
       - name: Scan for known security vulnerabilities in gems used
         run: bin/bundler-audit
-      
+
   lint:
     runs-on: ubuntu-latest
     env:
@@ -74,6 +74,10 @@ jobs:
       - name: Run tests
         env:
           RAILS_ENV: test
+          RECAPTCHA_SITE_KEY_V3: ${{ secrets.RECAPTCHA_SITE_KEY_V3 }}
+          RECAPTCHA_SECRET_KEY_V3: ${{ secrets.RECAPTCHA_SECRET_KEY_V3 }}
+          RECAPTCHA_SITE_KEY_V2: ${{ secrets.RECAPTCHA_SITE_KEY_V2 }}
+          RECAPTCHA_SECRET_KEY_V2: ${{ secrets.RECAPTCHA_SECRET_KEY_V2 }}
           # RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
           # REDIS_URL: redis://localhost:6379/0
         run: bin/rails db:test:prepare test
