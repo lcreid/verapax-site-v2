@@ -1,1 +1,80 @@
-<%= render partial: "coming_soon" %>
+<%= render partial: "hero" %>
+
+<div class="concave-up bg-secondary"></div>
+<div class="grid-max-2 grid-centred bg-secondary text-white p-2 p-sm-5">
+  <h2>Who We Work With</h2>
+  <div>
+    <p>
+      We work with entities that embrace situated, participatory, collaborative
+      and empowerment approaches to community or social development.
+      Our clients include the non-profit/social-purpose sector, civil society organizations,
+      public-private partnerships, the public sector, and academic and non-profit partnerships.
+      To date, we have contributed our services to initiatives in diverse regions of the Americas, Africa, and Asia.
+    </p>
+    <p>
+      Are you passionate about designing and delivering impactful initiatives
+      to address complex systems that generate social problems such as poverty,
+      violence, racism, and forced migration?
+      Are you a community-based organization, a public sector institution,
+      an institution of academic teaching and learning, or a non-profit or non-governmental society?
+      Let’s chat to see how the Verapax approach can work for you. We would love to connect with you!
+    </p>
+  </div>
+</div>
+<div class="concave-down bg-secondary"></div>
+
+<div class="bg-body-tertiary"></div>
+<div class="grid-max-2 grid-centred bg-body-tertiary text-white p-2 p-sm-5">
+  <%= link_to "https://www.mothersmattercentre.ca/hippy-navigation/", class: "link-light d-block text-center my-auto" do %>
+    <%= image_tag("aboriginal-hippy-logo.jpg", alt: "Aboriginal HIPPY Logo",
+      class: "client-logo d-block m-auto px-5") %>
+    Indigenous Home Instruction for Parents of Preschool Youngsters (HIPPY) in Canada
+  <% end %>
+  <%= link_to "https://www.mothersmattercentre.ca/", class: "link-light d-block text-center my-auto" do %>
+    <%= image_tag("MMC-Logo-WEB.gif", alt: "Mothers Matter Logo",
+      class: "client-logo d-block m-auto px-5") %>
+    Mothers Matter Centre
+  <% end %>
+  <%= link_to "https://issbc.org/", class: "link-light d-block text-center my-auto" do %>
+    <%= image_tag("issofbc-logo.svg", alt: "ISS Logo",
+      class: "client-logo d-block m-auto px-5") %>
+    Immigrant Services Society of BC
+  <% end %>
+  <%= link_to "http://clasbc.net/", class: "link-light d-block text-center my-auto" do %>
+    <%= image_tag("clasbc-logo.png", alt: "CLASBC Logo",
+      class: "client-logo d-block m-auto px-5") %>
+    Community Legal Assistance Society of BC (CLASBC)
+  <% end %>
+  <%= link_to "https://mwcbc.ca/", class: "link-light d-block text-center my-auto" do %>
+    <%= image_tag("mwcbc-logo.png", alt: "Migrant Workers Centre Logo",
+      class: "client-logo d-block m-auto px-5 bg-dark") %>
+    West Coast Domestic Workers Association
+  <% end %>
+  <%= link_to "http://www.povnet.org/", class: "link-light d-block text-center my-auto" do %>
+    <div class="d-block mx-auto" style="max-width: 200px;">
+      <%= image_tag("povnet-logo.jpg", alt: "Povnet Logo",
+        class: "client-logo d-block m-auto px-5") %>
+    </div>
+    PovNet Society
+  <% end %>
+  <%= link_to "http://www.vast-vancouver.ca/", class: "link-light d-block text-center my-auto" do %>
+    <%= image_tag("vast.jpg", alt: "VAST Logo",
+      class: "client-logo d-block m-auto px-5") %>
+    Vancouver Association for the Survivors of Torture, VAST
+  <% end %>
+  <%= link_to "http://parentsupportbc.ca/", class: "link-light d-block text-center my-auto" do %>
+    <%= image_tag("pss-logo.png", alt: "PSS Logo",
+      class: "client-logo d-block m-auto px-5") %>
+    Parent Support Services Society of BC
+  <% end %>
+  <span class="w-100 text-center">Vancouver Status of Women</span>
+  <span class="w-100 text-center">Interfaith Summer Institute for Peace, Justice, and Social Movements</span>
+  <%= link_to "https://students.ubc.ca/about-student-services/go-global", class: "link-light d-block text-center my-auto pb-3" do %>
+    University of British Columbia GoGlobal
+  <% end %>
+  <%= link_to "http://www.sfu.ca/international/index/development.html", class: "link-light d-block text-center my-auto pb-3" do %>
+    Simon Fraser University International Office (iSFU)
+  <% end %>
+</div>
+
+<%= render partial: "footer" %>
