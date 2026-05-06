@@ -1,0 +1,5 @@
+<p><%= @contact.name %> sent a message via the contact us page, <%= @contact.updated_at.iso8601 %></p>
+
+<hr/>
+
+<%= simple_format(@contact.message) %>

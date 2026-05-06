@@ -7,3 +7,15 @@ contact_02:
   name: Name Contact02
   email_address: contact_02@example.com
   message: contact_02
+
+reply_01_on_02:
+  name: Name Reply_01_on_02
+  email_address: reply_01_on_02@example.com
+  message: reply_01_on_02
+  start_of_thread: contact_02
+
+reply_02_on_02:
+  name: Name Reply_02_on_02
+  email_address: reply_02_on_02@example.com
+  message: reply_02_on_02
+  start_of_thread: contact_02

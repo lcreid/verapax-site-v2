@@ -10,6 +10,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
 
   test "post create_contact" do
     post create_contact_path, params: { contact: { name: "Name", email_address: "email@example.com", message: "Message" } }
+    assert_enqueued_email_with ContactUsMailer, :forward_contact_us, params: { contact: Contact.last }
     assert_redirected_to contact_thank_you_path
   end
 

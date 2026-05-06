@@ -19,6 +19,7 @@ class HomeController < ApplicationController
     success ||= verify_recaptcha(model: @contact, secret_key: ENV["RECAPTCHA_SECRET_KEY_V2"])
 
     if success && @contact.valid?(:unauthenticated) && @contact.save!
+      ContactUsMailer.with(contact: @contact).forward_contact_us.deliver_later
       redirect_to contact_thank_you_path
     else
       Rails.logger.warn("rendering contact_us unprocessable_entity success: #{success}")

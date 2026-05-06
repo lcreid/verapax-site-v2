@@ -1,0 +1,5 @@
+<%= @contact.name %> sent a message via the contact us page, <%= @contact.updated_at.iso8601 %>
+
+<%= "=" * 78 %>
+
+<%= word_wrap(@contact.message, line_width: 78) %>
