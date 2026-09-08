@@ -71,3 +71,4 @@ group :development do
 end
 
 gem "recaptcha", "~> 5.21"
+gem "json", "~> 2.21"
