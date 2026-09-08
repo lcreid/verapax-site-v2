@@ -22,24 +22,32 @@
 
   <div>
     <div class="mb-3">
-    <span class="fw-bold">Ángela Contreras</span><br/>
-    Founder, Director and Principal Consultant<br/>
-    <%= link_to("https://www.linkedin.com/in/angelam-contreras", target: "_blank") do %>
-      <i class="bi bi-linkedin invert-icons"><span class="visually-hidden">LinkedIn</span></i>
+    <span class="fw-bold">Ángela Contreras</span>
+    <%= link_to("https://www.linkedin.com/in/angelam-contreras", target: "_blank", class: "btn btn-sm", aria_label: "Their LinkedIn profile") do %>
+      <i class="bi bi-linkedin invert-icons" aria-hidden="true"><span class="visually-hidden">LinkedIn</span></i>
     <% end %>
-    <%= mail_to("angela.contreras@verapax.org", class: "text-light px-2") %><br/>
+    <br/>
+    Founder, Director and Principal Consultant<br/>
+    <%= mail_to("angela.contreras@verapax.org", class: "text-light") %><br/>
+    </div>
+
+    <div class="mb-3">
+    Oleksandra Mykhasyuta
+    <%= link_to("https://www.linkedin.com/in/oleksandra-mykhasyuta-212469393", target: "_blank", class: "btn btn-sm", aria_label: "Their LinkedIn profile") do %>
+      <i class="bi bi-linkedin invert-icons" aria-hidden="true"><span class="visually-hidden">LinkedIn</span></i>
+    <% end %>
+    <br/>
+    Project Officer and Forensic Sciences Expert<br/>
     </div>
 
     <div class="mb-3">
     Marcos R.C.<br/>
     Global Projects Administrator<br/>
-    <%= mail_to("projects@verapax.org", class: "text-light") %><br/>
     </div>
 
     <div class="mb-3">
     Antonio Contreras<br/>
     Operations and Logistics<br/>
-    <%= mail_to("logistics@verapax.org", class: "text-light") %><br/>
     </div>
   </div>
 
