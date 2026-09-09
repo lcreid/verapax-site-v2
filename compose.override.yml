@@ -2,6 +2,8 @@
 
 services:
   web:
+    group_add:
+      - "140"
     volumes:
       - ~/.gitconfig:/home/dev/.gitconfig
       # - /etc/passwd:/etc/passwd:ro
@@ -11,5 +13,6 @@ services:
       # so the target for this has to look like your home directory on the host.
       - ~/.ssh:/home/dev/.ssh:ro
       - ${SSH_AUTH_SOCK}:/ssh-agent
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - SSH_AUTH_SOCK=/ssh-agent
