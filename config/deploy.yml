@@ -100,25 +100,16 @@ ssh:
   user: deploy
 
 # Use accessory services (secrets come from .kamal/secrets).
-# accessories:
-#   db:
-#     image: mysql:8.0
-#     host: 192.168.0.2
-#     # Change to 3306 to expose port to the world instead of just local network.
-#     port: "127.0.0.1:3306:3306"
-#     env:
-#       clear:
-#         MYSQL_ROOT_HOST: '%'
-#       secret:
-#         - MYSQL_ROOT_PASSWORD
-#     files:
-#       - config/mysql/production.cnf:/etc/mysql/my.cnf
-#       - db/production.sql:/docker-entrypoint-initdb.d/setup.sql
-#     directories:
-#       - data:/var/lib/mysql
-#   redis:
-#     image: valkey/valkey:8
-#     host: 192.168.0.2
-#     port: 6379
-#     directories:
-#       - data:/data
+accessories:
+  backup:
+    image: ghcr.io/crmne/kamal-backup:1.1.1
+    host: kamal-a
+    files:
+      - config/kamal-backup.yml:/app/config/kamal-backup.yml:ro
+    env:
+      secret:
+        - RESTIC_PASSWORD
+    volumes:
+      - verapax_site_state:/var/lib/kamal-backup
+      - /home/deploy/.ssh/id_ed25519:/root/.ssh/id_ed25519:ro
+      - /home/deploy/.ssh/known_hosts:/root/.ssh/known_hosts:ro

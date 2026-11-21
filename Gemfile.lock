@@ -151,6 +151,8 @@ GEM
       sshkit (>= 1.23.0, < 2.0)
       thor (~> 1.3)
       zeitwerk (>= 2.6.18, < 3.0)
+    kamal-backup (1.1.1)
+      thor (~> 1.5)
     language_server-protocol (3.17.0.6)
     launchy (3.1.1)
       addressable (~> 2.8)
@@ -403,6 +405,7 @@ DEPENDENCIES
   jsbundling-rails
   json (~> 2.21)
   kamal
+  kamal-backup
   letter_opener_web (~> 3.0)
   propshaft
   puma (>= 5.0)
@@ -474,6 +477,7 @@ CHECKSUMS
   jsbundling-rails (1.3.1) sha256=0fa03f6d051c694cbf55a022d8be53399879f2c4cf38b2968f86379c62b1c2ca
   json (2.21.2) sha256=1f1d3b7cf2b3ba1a69beca0bb6db13d5438b80bff3cd54cdaaa620b9b07c1c6a
   kamal (2.12.0) sha256=c51d1ab085e515470f98d0c0f043637122b5ebf76e8b610cb1fbbed0b7f9b8fa
+  kamal-backup (1.1.1) sha256=1ef6f90e8e207e3633ee69beb2be0aef47730dac67caae91bd55c35befc8e36a
   language_server-protocol (3.17.0.6) sha256=5ef2c0c138f8267e1bc631d3328347d354f96724b0af22f2c79516120443b7f0
   launchy (3.1.1) sha256=72b847b5cc961589dde2c395af0108c86ff0119f42d4648d25b5440ebb10059e
   letter_opener (1.10.0) sha256=2ff33f2e3b5c3c26d1959be54b395c086ca6d44826e8bf41a14ff96fdf1bdbb2
