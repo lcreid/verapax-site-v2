@@ -1,7 +1,7 @@
 app: verapax_site
 accessory: backup
 databases:
-  - name: verapax_site
+  - name: main
     adapter: sqlite3
     path: /rails/storage/production.sqlite3
 restic:
