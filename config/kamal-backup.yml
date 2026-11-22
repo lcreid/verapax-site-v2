@@ -1,9 +1,15 @@
 app: verapax_site
 accessory: backup
 databases:
-  - name: main
-    adapter: sqlite3
-    path: storage/production.sqlite3
+  - name: verapax-site
+    adapter: sqlite
+    path: /rails/storage/production.sqlite3
+paths:
+  - path: /rails/storage
+    exclude:
+      - /rails/storage/*.sqlite3
+      - /rails/storage/*.sqlite3-wal
+      - /rails/storage/*.sqlite3-shm
 restic:
   repository: sftp:backup@fs-2:/NetBackup/restic
   password:
