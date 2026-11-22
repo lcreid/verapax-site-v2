@@ -3,7 +3,7 @@ accessory: backup
 databases:
   - name: main
     adapter: sqlite3
-    path: rails/storage/production.sqlite3
+    path: storage/production.sqlite3
 restic:
   repository: sftp:backup@fs-2:/NetBackup/restic
   password:
